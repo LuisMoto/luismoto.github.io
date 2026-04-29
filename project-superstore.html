@@ -10,8 +10,6 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=1">
     
     <style>
-    
-        
         .project-header {
             padding: 10rem 0;
             text-align: center;
@@ -61,7 +59,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        /* NEW: KPI Grid for Business Metrics */
+        /* KPI Grid for Business Metrics */
         .kpi-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -154,6 +152,25 @@
             color: #000000 !important;
             transform: translateY(-2px);
         }
+
+        /* CTA Container for Case Study */
+        .cta-container {
+            background: linear-gradient(to right, #050a15, #1a2a30);
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            margin: 4rem 0;
+            text-align: center;
+            border: 1px solid rgba(57, 91, 100, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cta-container h2 {
+            color: #ffffff !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
         
         /* Typography overrides for clarity */
         h2 { color: #ffffff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; display: inline-block; margin-bottom: 1.5rem;}
@@ -183,7 +200,7 @@
 
             <h2>1. Executive Summary</h2>
             <p>
-                A profitability analysis of 9,994 retail transactions identified a <span style="color:#ff4444; font-weight:bold;">critical financial issue</span> within the Central region. The <strong>Texas</strong> strong market is operating at a sustained <strong>-$33,955 net loss</strong> despite strong sales volume.
+                A profitability analysis of approximately 10,000 retail transactions identified a <span style="color:#ff4444; font-weight:bold;">critical financial issue</span> within the Central region. The <strong>Texas</strong> market is operating at a sustained <strong>-$33,955 net loss</strong> despite strong sales volume.
             </p>
             <p>
                 Implementing a <strong>targeted 5% discount reduction on high-discount transactions</strong> in Texas recovers <strong>$9,051.80</strong> in net profit, improving the segment's performance by <strong>26%</strong> without affecting overall operations.
@@ -267,9 +284,22 @@
                 </ul>
             </div>
 
-            <ul class="actions stacked" style="margin-top: 4rem; text-align: center;">
-                <li><a href="https://github.com/tu-usuario/tu-repo" target="_blank" class="button big button-cyan">View Source Code on GitHub</a></li>
-            </ul>
+            <div class="cta-container">
+                <h2>Deep Dive into the Analysis</h2>
+                <p style="color: #ccc; margin-bottom: 2rem;">Download the full Evidence-Driven Case Study to review the complete methodology, Python diagnostic logic, and strategic recommendations.</p>
+                <ul class="actions" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <li>
+                        <a href="assets/pdf/retail_profitability_case_study_luis_moto.pdf" target="_blank" class="button primary big icon solid fa-download" style="background-color: #395b64; color: #fff; box-shadow: none;">
+                            Download Case Study
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/LuisMoto/bi_project_supersotre" target="_blank" class="button big button-cyan icon brands fa-github">
+                            View Source Code
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </section>
