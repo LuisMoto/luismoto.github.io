@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Neural Threat Analyzer - Luis Moto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        .project-header {
+            padding: 9rem 0;
+            text-align: center;
+            position: relative;
+            background-color: #000;
+            background-image: url('images/gallery/fulls/03.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 20, 10, 0.85);
+            z-index: 1;
+        }
+
+        .project-header .inner { position: relative; z-index: 2; }
+        .project-header h1, .project-header p { color: #ffffff !important; }
+
+        .insight-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #09281d;
+            margin-bottom: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid #09281d;
+        }
+
+        .feature-item h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #fff;
+            display: inline-block;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin: 0.2rem;
+        }
+
+        .gui-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gui-item {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gui-item:hover {
+            transform: scale(1.03);
+            border-color: #09281d;
+        }
+
+        .gui-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gui-caption {
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+            border-top: 1px solid #333;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .dashboard-img-container {
+            margin-top: 3rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .dashboard-img-container iframe {
+            width: 100%;
+            display: block;
+        }
+
+        hr {
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+<div id="wrapper" class="divided">
+
+    <section class="project-header">
+        <div class="inner">
+            <a href="index.html#projects" class="button small">← Back to Portfolio</a>
+            <h1 style="margin-top: 2rem;">Neural Threat Analyzer</h1>
+            <p class="major">Hybrid Machine Learning System for Threat Detection</p>
+            <div class="tags">
+                <span class="tech-tag">PYTHON 3.12</span>
+                <span class="tech-tag">SCIKIT-LEARN</span>
+                <span class="tech-tag">SPACY</span>
+                <span class="tech-tag">STREAMLIT</span>
+                <span class="tech-tag">CUSTOMTKINTER</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="row">
+                <div class="col-6 col-12-medium">
+                    <h2>The Security Problem</h2>
+                    <p>
+                        Traditional filters often depend on static keyword detection, making them vulnerable to obfuscated phishing attempts and structured payload attacks. This project addresses that limitation by combining language-based signals with structural indicators to improve threat classification.
+                    </p>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <div class="insight-card">
+                        <h3>Data Engineering Strategy</h3>
+                        <p>
+                            A custom dataset was assembled by merging modern phishing corpora, safe corporate communication, academic text, and SQL injection payloads. A strict undersampling strategy ensured balanced representation across the three target classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="align-center">
+                <h2>Technical Architecture</h2>
+                <p>
+                    The detection engine uses a hybrid feature pipeline that combines semantic representation with handcrafted structural indicators.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>NLP Processing</h3>
+                    <p>
+                        Text is normalized and cleaned using SpaCy. An input-length control mechanism safely handles oversized payloads without exhausting system memory.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Hybrid Vectorization</h3>
+                    <p>
+                        A TF-IDF vectorizer captures vocabulary and n-gram patterns, while engineered binary features identify structural signals such as URLs, SQL operators, and urgency markers.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Interpretable Classification</h3>
+                    <p>
+                        Logistic Regression was selected for its performance in sparse high-dimensional data and its ability to provide probabilistic confidence scores for downstream analysis.
+                    </p>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner align-center">
+            <h2>Real-Time Detection Interface</h2>
+            <p>
+                A desktop application built with CustomTkinter enables real-time evaluation of suspicious payloads with color-coded threat outputs.
+            </p>
+
+            <div class="gui-gallery">
+                <div class="gui-item">
+                    <img src="images/projects/cyber_safe.png" alt="Safe Detection">
+                    <div class="gui-caption"><strong>Safe Content</strong><br>Legitimate communication identified</div>
+                </div>
+
+                <div class="gui-item">
+                    <img src="images/projects/cyber_phishing.png" alt="Phishing Detection">
+                    <div class="gui-caption"><strong>Phishing Attempt</strong><br>Social engineering indicators detected</div>
+                </div>
+
+                <div class="gui-item">
+                    <img src="images/projects/cyber_sqli.png" alt="SQL Injection Detection">
+                    <div class="gui-caption"><strong>SQL Injection</strong><br>Malicious syntax recognized</div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="align-center">
+                <h2>Model Monitoring & Explainability Dashboard</h2>
+                <p>
+                    A Streamlit dashboard was developed to monitor performance, analyze prediction behavior, and improve interpretability for technical stakeholders.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Performance Monitoring</h3>
+                    <p>
+                        Tracks accuracy, cross-validation results, and class-level metrics to assess model stability over time.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Error Analysis</h3>
+                    <p>
+                        Uses confusion matrices and misclassification logs to identify false positives and improve detection thresholds.
+                    </p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Feature Importance</h3>
+                    <p>
+                        Highlights the lexical and structural signals that contribute most strongly to predictions, improving interpretability in model decision-making.
+                    </p>
+                </div>
+            </div>
+
+            <div class="dashboard-img-container">
+                <iframe 
+                    src="http://localhost:8501/?embed=true" 
+                    width="100%" 
+                    height="750px" 
+                    style="border: none;">
+                </iframe>
+            </div>
+            <hr />
+        </div>
+    </section>
+            
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="row">
+                <div class="col-6 col-12-medium">
+                    <div class="insight-card" style="border-left-color: #09281d">
+                        <h3>Key Technical Finding</h3>
+                        <p>
+                            During testing, a feature dominance bias was observed around URL-related signals. Because phishing datasets strongly associate links with malicious intent, benign URLs may trigger false positives when isolated from contextual language.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-12-medium">
+                    <h2>Limitations & Future Work</h2>
+                    <p>
+                        Future iterations will focus on reducing feature bias and strengthening contextual awareness:
+                    </p>
+                    <ul>
+                        <li>Augment the safe dataset with benign URLs to improve balance.</li>
+                        <li>Integrate external reputation checks through threat intelligence APIs.</li>
+                        <li>Expand explainability modules for analyst-facing reporting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="actions stacked" style="margin-top: 4rem; text-align: center;">
+                <li>
+                    <a href="https://github.com/tu-usuario/tu-repo" target="_blank" class="button primary big">
+                        View Source Code on GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="wrapper style1 align-center">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:your_email@example.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p>&copy; Luis Moto 2026.</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

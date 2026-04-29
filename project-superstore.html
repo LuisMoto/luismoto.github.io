@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Retail Profitability Analysis - Luis Moto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+    
+        
+        .project-header {
+            padding: 10rem 0;
+            text-align: center;
+            position: relative;
+            background-color: #050a15;
+            background-image: url('images/gallery/fulls/01.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Gradient overlay for a fintech/data aesthetic */
+            background: linear-gradient(135deg, rgba(5, 10, 21, 0.95) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .project-header .inner { position: relative; z-index: 2; }
+        .project-header h1 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase;}
+        .project-header p { color: #395b64 !important; font-weight: 300; letter-spacing: 1px;}
+
+        /* Tech Tags */
+        .tech-tag { 
+            display: inline-block; 
+            background: transparent; 
+            color: #395b64; 
+            padding: 0.3rem 1rem; 
+            border-radius: 20px; 
+            border: 1px solid #395b64;
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            margin: 0.3rem;
+            letter-spacing: 1px;
+        }
+
+        /* Insight Card */
+        .insight-card { 
+            background: rgba(255, 255, 255, 0.02); 
+            padding: 2.5rem; 
+            border-radius: 8px; 
+            border-left: 4px solid #395b64;
+            margin-bottom: 2rem; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* NEW: KPI Grid for Business Metrics */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: rgba(53, 78, 84, 0.05);
+            border: 1px solid rgba(53, 78, 84, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            border-color: #395b64;
+            background: rgba(0, 210, 255, 0.08);
+        }
+
+        .kpi-card h4 {
+            font-size: 0.85rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .kpi-value.positive { color: #00ff66; }
+        .kpi-value.negative { color: #ff4444; }
+
+        /* Media Containers */
+        .dashboard-container, .viz-container { 
+            width: 100%; 
+            background: #050505; 
+            border: 1px solid #222; 
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        .dashboard-container::after, .viz-container::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 8px;
+            box-shadow: inset 0 0 0 1px rgba(0, 210, 255, 0.2);
+            pointer-events: none;
+        }
+
+        .dashboard-container img, .viz-container img { 
+            width: 100%; 
+            display: block; 
+            transition: opacity 0.3s ease;
+        }
+
+        .dashboard-container:hover img, .viz-container:hover img {
+            opacity: 0.9;
+        }
+
+        hr.section-divider { 
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0, 210, 255, 0.3), transparent); 
+            margin: 4rem 0; 
+        }
+
+        /* Cyan Button */
+        .button-cyan {
+            background-color: transparent !important;
+            color: #395b64 !important; 
+            box-shadow: inset 0 0 0 1px #395b64 !important;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .button-cyan:hover {
+            background-color: #395b64 !important; 
+            color: #000000 !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Typography overrides for clarity */
+        h2 { color: #ffffff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; display: inline-block; margin-bottom: 1.5rem;}
+        strong { color: #395b64; }
+    </style>
+</head>
+
+<body class="is-preload">
+<div id="wrapper" class="divided">
+
+    <section class="project-header">
+        <div class="inner">
+            <a href="index.html#projects" class="button small">← Back to Portfolio</a>
+            <h1 style="margin-top: 2rem;">Retail Profitability Analysis</h1>
+            <p class="major">Strategic Pricing Intervention & What-If Simulation</p>
+            <div class="tags">
+                <span class="tech-tag">PYTHON</span>
+                <span class="tech-tag">PANDAS</span>
+                <span class="tech-tag">POWER BI</span>
+                <span class="tech-tag">DAX</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner">
+
+            <h2>1. Executive Summary</h2>
+            <p>
+                A profitability analysis of 9,994 retail transactions identified a <span style="color:#ff4444; font-weight:bold;">critical financial issue</span> within the Central region. The <strong>Texas</strong> strong market is operating at a sustained <strong>-$33,955 net loss</strong> despite strong sales volume.
+            </p>
+            <p>
+                Implementing a <strong>targeted 5% discount reduction on high-discount transactions</strong> in Texas recovers <strong>$9,051.80</strong> in net profit, improving the segment's performance by <strong>26%</strong> without affecting overall operations.
+            </p>
+
+            <hr class="section-divider" />
+
+            <h2>2. Root Cause: Pricing Threshold</h2>
+            <p>
+                Initial analysis shows that standard discount levels generate a healthy <strong>+26.69%</strong> profit margin. However, performance deteriorates as discounts increase.
+            </p>
+            <p>
+                <strong>Profitability turns negative when discounts exceed the 20–30% range, revealing a structural pricing threshold.</strong>
+            </p>
+            <p>
+                This threshold explains why Texas operates at a loss, as discount levels in this region frequently fall within this range.
+            </p>
+
+            <div class="viz-container">
+                <img src="images/projects/super_profit.png" alt="Discount vs Profitability Analysis">
+            </div>
+
+            <hr class="section-divider" />
+
+            <h2>3. Targeted Simulation (What-If Analysis)</h2>
+            <p>
+                Instead of applying a general pricing adjustment, a <strong>targeted simulation</strong> was developed to isolate the effect of discount reductions on high-risk transactions. This approach isolates causality rather than relying on broad assumptions.
+            </p>
+            <p>
+                The model selectively reduces discounts by 5% only for transactions above the identified threshold, allowing for controlled evaluation of pricing adjustments.
+            </p>
+
+            <div class="insight-card">
+                <h3 style="margin-bottom: 0; color: #fff;">Simulation Impact</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Projected outcomes of the 5% discount reduction strategy.</p>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h4>Current State</h4>
+                        <div class="kpi-value negative">-$33,955</div>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Simulated State</h4>
+                        <div class="kpi-value negative">-$24,903</div>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Recovered Profit</h4>
+                        <div class="kpi-value positive">+$9,051</div>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Improvement</h4>
+                        <div class="kpi-value positive">+26.6%</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider" />
+
+            <h2>4. Interactive Dashboard</h2>
+            <p>
+                The analysis was translated into an interactive Power BI dashboard that operationalizes the identified pricing threshold.
+            </p>
+            <p>
+                A discount reduction parameter allows users to dynamically simulate pricing strategies and observe their impact on profitability across product categories. The results highlight that Furniture and Office Supplies present the highest recovery potential.
+            </p>
+
+            <div class="dashboard-container">
+                <img src="images/projects/super_dash.png" alt="Power BI Dashboard">
+            </div>
+
+            <hr class="section-divider" />
+
+            <h2>5. Technical Approach</h2>
+            <div class="insight-card" style="border-left-color: #444;">
+                <ul style="margin: 0; padding-left: 1rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Data Processing:</strong> Cleaned and structured transactional data using Pandas.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Feature Engineering:</strong> Created profitability and discount classification metrics.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Statistical Binning:</strong> Applied <code>pd.cut</code> to identify profitability thresholds.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Simulation Model:</strong> Built a pricing model to reconstruct original prices and simulate alternative discount strategies.</li>
+                    <li><strong>BI Implementation:</strong> Developed dynamic measures in Power BI using DAX to support real-time scenario analysis.</li>
+                </ul>
+            </div>
+
+            <ul class="actions stacked" style="margin-top: 4rem; text-align: center;">
+                <li><a href="https://github.com/tu-usuario/tu-repo" target="_blank" class="button big button-cyan">View Source Code on GitHub</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <footer class="wrapper style1 align-center">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p>&copy; Luis Moto 2026.</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

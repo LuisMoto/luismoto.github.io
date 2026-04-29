@@ -1,400 +1,522 @@
 <!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Luis Moto - Data Analyst & Applied Mathematics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" /> 
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+        /* --- NUEVOS ESTILOS DINÁMICOS --- */
+        
+        /* Bloque de cita para tu filosofía */
+        .philosophy-quote {
+            border-left: 4px solid #ffffff;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            font-style: italic;
+            font-size: 1.05rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #fff;
+        }
 
-<html>
-	<head>
-		<title>Portfolio Luis Armando Moto</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+        /* Grid para las tarjetas de experiencia */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+        /* Tarjeta individual de experiencia */
+        .exp-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="Home">
-						<div class="content">
-							<h1>Luis Moto</h1>
-							<p class="major">Welcome to my portfolio. Explore my work, background, and projects.</p>
-							<ul class="actions stacked">
-								<li><a href="#About Me" class="button big wide smooth-scroll-middle">Get Started</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/banner.jpg" alt="" />
-						</div>
-					</section>
+        .exp-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="About Me">
-						<div class="content">
-							<h2>About Me</h2>
-							<p>I'm Luis Armando Macías Moto, a student of <strong>Applied Mathematics</strong> and a graduate in <strong>Linguistics</strong>, with a deep interest in data, language, and logic.</p>
-							<p>I focus on <strong>Business Intelligence</strong> and <strong>data visualization</strong>, working with tools like <strong>Power BI</strong>, <strong>Python</strong>, and <strong>SQL</strong> to turn raw information into clear, actionable insights.</p>
-							<p>My academic background combines analytical precision with communication skills. I’m used to breaking down problems, thinking through systems, and justifying every decision I make.</p>
-							<p>I'm currently building a portfolio of real-world projects, and I’m open to collaboration, new challenges, and learning opportunities.</p>
-              <h2>Aside from academic and professional life</h2>
-							<p>I have a strong interest in <strong>literature</strong>, especially authors like Borges, Cortázar, Pynchon, and Boris Vian.</p>
-      				<p>In <strong>music</strong>, I enjoy playing <strong>bass</strong> and <strong>piano</strong>, writing songs, and performing with my band. I’ve always been interested in express myself with friends.</p>
-      				<p>My main personal passion is <strong>chess</strong>. I train regularly and compete in official FIDE-rated tournaments. Chess has shaped the way I think — I value its focus on structure, logic, and decision-making, and it influences how I approach learning and analysis in general.</p>
-							<ul class="actions stacked">
-								<li><a href="#Projects" class="button">Take a Look at my projects</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight01.jpg" alt="" />
-						</div>
-					</section>
+        .exp-header {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Education</h2>
-                <ul>
-                  <li>
-									<strong>B.Sc. in Applied Mathematics</strong> – <strong>UNAM</strong>, National Autonomous University of Mexico (in progress)
-									<p>My studies focus on <strong>discrete mathematics</strong>, <strong>linear algebra</strong>, and <strong>probability theory</strong>. These areas provide the essential theoretical and practical tools for analyzing complex data structures, modeling relationships, and understanding uncertainty within datasets.</p>
-									<p>This mathematical foundation strengthens my skills in <strong>algorithm development</strong>, <strong>data interpretation</strong>, and <strong>problem-solving</strong>, which are key in business intelligence and data analysis. By combining these mathematical disciplines with my background in linguistics, I am equipped to approach data-driven challenges with a unique perspective that blends formal reasoning with real-world applications.</p>
-									</li>
-									<li>
-									<strong>B.A. in Linguistics</strong> – <strong>UAM</strong>, Metropolitan Autonomous University (2019–2024)
-									<p>I hold a Bachelor's degree in Linguistics from the Metropolitan Autonomous University (UAM), where I developed a deep interest in <strong>neurolinguistics</strong> and, later, in <strong>computational linguistics</strong>. My main academic focus has always been <strong>syntax</strong> and <strong>semantics</strong>, which shaped my analytical thinking and my fascination with the intersection between language and systems.</p>
-									<p>This curiosity led me to explore how linguistic structures can be modeled computationally and how natural language can be processed and analyzed through <strong>data-driven methods</strong>. These experiences naturally paved the way toward my current focus on <strong>business intelligence</strong> and <strong>data analysis</strong>, where I apply similar principles of structure, meaning, and pattern recognition to extract insights from complex datasets.</p>
-							<ul class="actions stacked">
-								<li><a href="#Professional Experience" class="button">Profesional Experience</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>
+        .exp-header h3 {
+            margin-bottom: 0.3rem;
+            color: #fff;
+            font-size: 1.3rem;
+        }
 
-				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Professional Experience">
-						<div class="content">
-							<h2>Professional Experience</h2>
-              <ul>
-                <li>
-                  <strong>AI Trainer – Language Models</strong><br />
-                  <strong>Outlier.org</strong> (Remote) | Mar. 2024 – Present
-                  <p>As an AI Trainer, I worked on two main domains: <strong>linguistics</strong> and <strong>mathematics</strong>. On the linguistic side, I curated and structured <strong>datasets</strong> to improve the semantic consistency, fluency, and contextual understanding of large language models. I designed prompts and evaluated responses for tasks involving <strong>natural language generation</strong>, <strong>paraphrasing</strong>, and <strong>question answering</strong>.</p>
-                  <p>In the mathematics area, I supported the development of AI models by reviewing, completing, and evaluating <strong>mathematical explanations</strong>, <strong>exercises</strong>, and <strong>instructional content</strong>. This included not only solving problems but also crafting clear and pedagogically sound step-by-step solutions. I also contributed to the design of content that demonstrated or explained how to prove <strong>mathematical theorems</strong>, ensuring both formal rigor and educational value.</p>
-                  <p>This role allowed me to consolidate my academic foundations in both language and mathematics, and to apply them in a highly interdisciplinary environment. It strengthened my ability to break down complex concepts, model them precisely, and bridge the gap between <strong>human communication</strong> and <strong>computational logic</strong>.</p>
-                </li>
-                <li>
-                  <strong>Clinical Research Intern</strong><br />
-                  <strong>Hospital Manuel Gea González</strong> | Jun. 2023 – Jan. 2024
-                  <p>This internship, which served as my <strong>social service</strong> for the Linguistics degree, involved supporting <strong>clinical research</strong> projects focused on improving patient outcomes. I assisted in <strong>patient recruitment</strong> and ensured strict adherence to <strong>ethical protocols</strong> and <strong>confidentiality</strong> standards.</p>
-                  <p>I maintained accurate <strong>clinical records</strong> and participated in the <strong>collection of clinical data</strong>. I documented observations and measurements, ensuring data quality and alignment with study protocols.</p>
-                  <p>I also contributed to <strong>preliminary statistical analysis</strong> and created basic <strong>data visualizations</strong> for internal presentations and reports, supporting experimental design decisions.</p>
-                  <p>This experience gave me insight into the research process, ethical standards, and data accuracy. It improved my collaboration and <strong>scientific documentation</strong> skills.</p>
-                </li>
-                <li>
-                  <strong>Data Analyst</strong><br />
-                  <strong>Zensitud</strong> – Online Psychology Platform | Jan. 2021 – Apr. 2022
-                  <p>This was my first professional role in <strong>data analysis</strong> and <strong>visualization</strong>. At Zensitud, I analyzed behavioral data from over <strong>2,000 users</strong> using <strong>Python</strong> and <strong>SQL</strong>, generating reports that guided strategic decisions.</p>
-                  <p>I created interactive <strong>Power BI dashboards</strong> to track <strong>session attendance</strong>, <strong>user retention</strong>, and <strong>module completion</strong>. These visualizations enabled real-time performance monitoring and content improvements.</p>
-                  <p>The insights led to a <strong>10% revenue increase</strong> and higher user engagement. This role helped me develop the ability to turn data into decisions and understand how <strong>data-driven strategies</strong> shape digital services.</p>
-                </li>
-              </ul>
-      
-              <h2>Additional Experience</h2>
-              <ul>
-                <li>
-                  <strong>Freelance Academic Editor</strong><br />
-                  Independent Work | Feb. 2020 – Aug. 2023
-                  <p>I worked as a <strong>style editor</strong> and <strong>writing assistant</strong> for university students across various disciplines, including <strong>social sciences</strong>, <strong>natural sciences</strong>, and <strong>engineering</strong>. I edited <strong>essays</strong>, <strong>theses</strong>, and <strong>academic reports</strong>, focusing on <strong>clarity</strong>, <strong>structure</strong>, and <strong>argumentation</strong>, helping students meet <strong>academic standards</strong> in both Spanish and English.</p>
-                </li>
-                <br />
-                <li>
-                  <strong>Chess Teaching Assistant</strong><br />
-                  ENP No. 2, UNAM | Aug. 2020 – Apr. 2021
-                  <p>I assisted the <strong>women’s chess team</strong> by supporting <strong>practice sessions</strong>, preparing <strong>training material</strong>, and helping organize <strong>internal tournaments</strong>. I provided <strong>individual guidance</strong> and contributed to the team's development in <strong>strategy</strong> and <strong>fundamentals</strong>.</p>
-                </li>
-                <br />
-                <li>
-                  <strong>Contact Center Agent</strong><br />
-                  Telvista | Aug. 2016 – Jun. 2017
-                  <p>I worked in the <strong>Telmex social collections department</strong>, focused on <strong>courteous and respectful communication</strong>, without applying pressure for payments. Later, I joined <strong>Aeroméxico's customer service team</strong> for the <strong>European region</strong>, handling <strong>inquiries</strong>, <strong>rebookings</strong>, and <strong>client support</strong>, ensuring high-quality attention across <strong>languages</strong> and <strong>time zones</strong>.</p>
-                </li>
-              </ul>
+        .exp-header .company {
+            color: #aaa;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
 
-							<ul class="actions stacked">
-								<li><a href="#Technical Skills" class="button">See my Technical Skills</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section>
-        <!-- Five -->
-        <section class="wrapper style1 align-center" id="Projects">
-          <div class="inner">
-            <h2>Projects</h2>
-          </div>
+        .exp-header .date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
 
-          <!-- Gallery -->
-          <div class="gallery style2 medium lightbox onscroll-fade-in">
+        .exp-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
 
-            <!-- Artículo 1 -->
-            <article>
-              <a href="#modal1" class="image modal-link">
-                <img src="images/gallery/thumbs/01.jpg" alt="Project 1" />
-              </a>
-              <div class="caption">
-                <h3>Project 1</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        .exp-card ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+            flex-grow: 1; /* Empuja el contenido para que las tarjetas midan lo mismo */
+        }
 
-            <!-- Artículo 2 -->
-            <article>
-              <a href="#modal2" class="image modal-link">
-                <img src="images/gallery/thumbs/02.jpg" alt="Project 2" />
-              </a>
-              <div class="caption">
-                <h3>Project 2</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        .exp-card ul li {
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            color: #ccc;
+        }
 
-            <!-- Artículo 3 -->
-            <article>
-              <a href="#modal3" class="image modal-link">
-                <img src="images/gallery/thumbs/03.jpg" alt="Project 3" />
-              </a>
-              <div class="caption">
-                <h3>Project 3</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        /* Contenedor para la experiencia adicional */
+        .additional-exp-container {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            text-align: left;
+        }
 
-            <!-- Artículo 4 -->
-            <article>
-              <a href="#modal4" class="image modal-link">
-                <img src="images/gallery/thumbs/04.jpg" alt="Project 4" />
-              </a>
-              <div class="caption">
-                <h3>Project 4</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        .additional-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-            <!-- Artículo 5 -->
-            <article>
-              <a href="#modal5" class="image modal-link">
-                <img src="images/gallery/thumbs/05.jpg" alt="Project 5" />
-              </a>
-              <div class="caption">
-                <h3>Project 5</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        .additional-list li {
+            margin-bottom: 1.2em; 
+            line-height: 1.5;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 1.2em;
+        }
+        
+        .additional-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
-            <!-- Artículo 6 -->
-            <article>
-              <a href="#modal6" class="image modal-link">
-                <img src="images/gallery/thumbs/06.jpg" alt="Project 6" />
-              </a>
-              <div class="caption">
-                <h3>Project 6</h3>
-                <p>Click image for details.</p>
-              </div>
-            </article>
+        .additional-list strong { color: #ffffff; }
+        .additional-list .year-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body class="is-preload">
 
-          </div>
+    <div id="wrapper" class="divided">
 
-          <!-- Modales vacíos -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
+        <section class="banner style2 orientation-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="home">
+            <div class="content">
+                <h1>Luis Moto</h1>
+                <p class="major">
+                    Data Analyst & Applied Mathematics student focused on turning complex systems into clear, actionable insights.
+                </p>
+                <ul class="actions stacked">
+                    <li><a href="#about-me" class="button big wide smooth-scroll-middle">Get Started</a></li>
+                </ul>
             </div>
-          </div>
-
-          <div id="modal2" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
+            <div class="image">
+                <img src="images/banner.jpg" alt="Luis Moto" />
             </div>
-          </div>
-
-          <div id="modal3" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
-            </div>
-          </div>
-
-          <div id="modal4" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
-            </div>
-          </div>
-
-          <div id="modal5" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
-            </div>
-          </div>
-
-          <div id="modal6" class="modal">
-            <div class="modal-content">
-              <span class="modal-close">&times;</span>
-              <p></p>
-            </div>
-          </div>
         </section>
 
-        <!-- Estilos para modales -->
-        <style>
-          .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-          }
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="about-me">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I’ve always been fascinated by how we structure information, whether through the rules of a language or the logic of an equation. My trajectory reflects this idea: I hold a <strong>B.A. in Linguistics (UAM)</strong> and I am currently pursuing a <strong>B.Sc. in Applied Mathematics at UNAM</strong>.</p>
+                
+                <p>I focus on <strong>Business Intelligence (BI) and Data Analysis</strong>, using tools like <strong>Python, SQL, and Power BI</strong> to transform disordered information into clear models and actionable decisions. In my recent projects, I have applied <strong>Machine Learning</strong> for pattern and anomaly detection, looking beyond the numbers to understand the system.</p>
+                
+                <div class="philosophy-quote">
+                    I believe a good analysis doesn’t end with the code and the dashboard. It ends when someone else can understand it, question it, and use it.
+                </div>
 
-          .modal-content {
-            background-color: #fff;
-            margin: auto;
-            padding: 20px 30px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 700px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            overflow-y: auto;
-            max-height: 80vh;
-          }
-
-          .modal-close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-          }
-
-          .modal-close:hover,
-          .modal-close:focus {
-            color: #000;
-            text-decoration: none;
-          }
-        </style>
-
-        <!-- Script para abrir/cerrar modales -->
-        <script>
-          document.querySelectorAll('.modal-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-              e.preventDefault();
-              const modalId = this.getAttribute('href');
-              const modal = document.querySelector(modalId);
-              if (modal) modal.style.display = 'block';
-            });
-          });
-
-          document.querySelectorAll('.modal-close').forEach(btn => {
-            btn.addEventListener('click', function () {
-              this.closest('.modal').style.display = 'none';
-            });
-          });
-
-          window.addEventListener('click', function (e) {
-            document.querySelectorAll('.modal').forEach(modal => {
-              if (e.target === modal) {
-                modal.style.display = 'none';
-              }
-            });
-          });
-        </script>
-
-
-				<!-- Six -->
-					<section class="wrapper style1 align-center" id="Technical Skills">
-						<div class="inner">
-							<h2>Technical Skills</h2>
-							<p>My technical skills span the full data workflow: extracting and transforming data with <strong>Python</strong> and <strong>pandas</strong>, managing and querying databases using <strong>SQL</strong> (PostgreSQL/MySQL), and building interactive dashboards and reports with <strong>Power BI</strong>. I also automate processes and perform basic analysis with libraries like <strong>NumPy</strong>, <strong>Matplotlib</strong>, and <strong>scikit‑learn</strong>, ensuring reliable, repeatable results.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon solid style2 major fa-sync-alt"></span>
-									<h3>Data Extraction and Transformation (ETL)</h3>
-									<p>I handle data extraction and transformation from various sources, including APIs, CSV files, and databases. I primarily use <strong>Python</strong> with libraries like <strong>pandas</strong> for cleaning, preprocessing, and transforming data. I ensure data quality and consistency to achieve reliable analysis results.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-save"></span>
-									<h3>Data Storage and Management</h3>
-									<p>I work with relational databases such as <strong>PostgreSQL</strong> and <strong>MySQL</strong>, as well as NoSQL databases like <strong>MongoDB</strong>. I design and optimize database schemas and write complex <strong>SQL</strong> queries using joins, subqueries, and aggregate functions to retrieve precise and efficient data.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-chart-bar"></span>
-									<h3>Data Visualization</h3>
-									<p>I specialize in creating interactive dashboards using <strong>Power BI</strong>, building visual reports including charts, pivot tables, and KPIs to facilitate decision-making. I am proficient in creating measures and calculated columns using <strong>DAX</strong> for advanced analysis.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-desktop"></span>
-									<h3>Programming and Automation</h3>
-									<p>I program in <strong>Python</strong> to automate data manipulation and analysis workflows, utilizing libraries such as <strong>numpy</strong> for numerical operations, <strong>matplotlib</strong> and <strong>seaborn</strong> for visualization, and <strong>scikit-learn</strong> for statistical analysis and basic machine learning.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-cog"></span>
-									<h3>Managing Data</h3>
-									<p>Also, I'm experienced in using <strong>SQL</strong> for querying and managing relational databases such as <strong>PostgreSQL</strong> and <strong>MySQL</strong>. I write complex queries involving <strong>joins</strong>, <strong>subqueries</strong>, <strong>window functions</strong>, and <strong>aggregate operations</strong> to retrieve, manipulate, and analyze data efficiently.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Office & Productivity Tools</h3>
-									<p>Additionally, I leverage <strong>Microsoft Office</strong> tools, especially <strong>Excel</strong> for advanced formulas, pivot tables, and data cleaning; <strong>PowerPoint</strong> for clear, and fast presentations; and <strong>Word</strong> for structured documentation and reporting.</p>
-								</section>
-							<ul class="actions stacked">
-							<li><a href="#Home" class="button">Go to top</a></li>
-							</ul>	
-							</div>
-						</div>
-					</section>
-
-        <!-- Footer -->
-          <footer class="wrapper style1 align-center">
-            <div class="inner">
-              <ul class="icons">
-                <li>
-                  <a href="https://www.instagram.com/luismmoto?igsh=c3dkZzF3OGhsNXly" target="_blank" class="icon brands style2 fa-instagram">
-                    <span class="label">Instagram</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/armandomoto?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="icon brands style2 fa-linkedin-in">
-                    <span class="label">LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:armandomoto@ciencias.unam.mx" class="icon style2 fa-envelope">
-                    <span class="label">Email</span>
-                  </a>
-                </li>
-              </ul>
-              <p>© 2025 Luis Moto.</p>
+                <div style="margin-top: 2.5rem;">
+                    <h3 style="font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">Beyond the Data</h3>
+                    <p style="font-size: 0.9rem; color: #bbb; line-height: 1.6;"><strong>Music & Books:</strong> I play bass and piano, and I really enjoy playing with friends—building something together in real time. Outside of that, I spend a lot of time reading. I gravitate toward Latin American authors like Borges or Cortázar, drawn to works that balance structure and freedom.</p>
+                </div>
+                
+                <ul class="actions stacked" style="margin-top: 2rem;">
+                    <li><a href="#experience" class="button smooth-scroll-middle">See Experience</a></li>
+                </ul>
             </div>
-          </footer>
+            <div class="image">
+                <img src="images/spotlight01.jpg" alt="Luis Moto - Linguistics and Applied Mathematics" />
+            </div>
+        </section>
 
+        <section class="wrapper style1 align-center" id="education">
+            <div class="inner">
+                <h2>Education & Academic Foundation</h2>
+                <p>A dual background in Applied Mathematics and Linguistics, bridging the gap between formal structures and computational modeling.</p>
+                
+                <div class="row" style="margin-top: 3rem; text-align: left;">
+                    
+                    <div class="col-6 col-12-medium">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #3c3748; overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="width: 100%; height: 200px; overflow: hidden;">
+                                <img src="images/gallery/fulls/08.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Mathematics Background">
+                            </div>
+                            
+                            <div style="padding: 2.5rem;">
+                                <h3 style="margin-bottom: 0.5rem;">B.S. in Applied Mathematics</h3>
+                                <h4 style="color: #ffffff; margin-bottom: 0;">National Autonomous University of Mexico (UNAM)</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);"><em>2023 — Present</em></p>
+                                
+                                <p style="font-size: 0.95rem;">Focus on modeling and analyzing real-world problems through mathematical and computational tools. I work with <strong>probability, statistics, differential equations, and scientific computing</strong> to understand complex phenomena and transform them into quantifiable models.</p>
+                                <p style="font-size: 0.95rem;">This approach allows me to tackle data not just technically, but structurally: understanding how it is generated, how it behaves, and what information it truly provides. My current focus is applying these tools to <strong>Data Analysis, Machine Learning, and Cybersecurity</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                    <div class="col-6 col-12-medium">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #676054; overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="width: 100%; height: 200px; overflow: hidden;">
+                                <img src="images/gallery/fulls/12.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Linguistics Background">
+                            </div>
 
-	</body>
+                            <div style="padding: 2.5rem;">
+                                <h3 style="margin-bottom: 0.5rem;">B.A. in Linguistics</h3>
+                                <h4 style="color: #ffffff; margin-bottom: 0;">Autonomous Metropolitan University (UAM)</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);"><em>Graduate</em></p>
+                                
+                                <p style="font-size: 0.95rem;">Training in the formal analysis of language as a structured system, addressing <strong>syntax, semantics, and usage patterns</strong> from an analytical perspective. This expertise is directly transferable to data science and LLMs: understanding how information is organized and identifying patterns in complex systems.</p>
+                                <p style="font-size: 0.95rem;">This foundation reinforces my ability to design logical structures and analyze symbolic systems, which I apply to the <strong>evaluation of models where language and data intersect</strong> (NLP and Computational Linguistics).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <section class="wrapper style1 align-center" id="certifications">
+                    <div class="inner">
+                        <h2>Certifications & Continuous Learning</h2>
+                        <p>Specialized programs focused on methodology, research, and advanced analytical tools.</p>
+                        
+                        <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: left;">
+                            
+                            <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                                <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                                    <div style="padding: 2rem; flex-grow: 1;">
+                                        <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">IBM Data Science</h3>
+                                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Professional Certificate</p>
+                                        <p style="font-size: 0.88rem;">Mastery of the full data science lifecycle: from methodology and SQL/Python tools to data visualization and predictive project development.</p>
+                                    </div>
+                                    <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
+                                        <img src="images/gallery/fulls/04.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Data Science">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                                <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                                    <div style="padding: 2rem; flex-grow: 1;">
+                                        <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Neurolinguistics</h3>
+                                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Saint Petersburg University</p>
+                                        <p style="font-size: 0.88rem;">Analysis of neurobiological language mechanisms, focusing on neurophysiological acquisition and speech processing research methods.</p>
+                                    </div>
+                                    <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
+                                        <img src="images/gallery/fulls/12.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Neurolinguistics">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                                <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                                    <div style="padding: 2rem; flex-grow: 1;">
+                                        <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Scientific Writing</h3>
+                                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Faculty of Sciences, UNAM</p>
+                                        <p style="font-size: 0.88rem;">Development of logical rigor and structural clarity in technical communication for documenting complex scientific research.</p>
+                                    </div>
+                                    <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
+                                        <img src="images/gallery/fulls/05.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Scientific Writing">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                                <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                                    <div style="padding: 2rem; flex-grow: 1;">
+                                        <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Mathematics Master</h3>
+                                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">CONAMAT Diploma</p>
+                                        <p style="font-size: 0.88rem;">Intensive training in advanced algebraic structures, calculus, and analytic geometry for complex problem-solving.</p>
+                                    </div>
+                                    <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
+                                        <img src="images/gallery/fulls/08.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Mathematics">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="wrapper style1 align-center" id="experience">
+            <div class="inner">
+                <h2>Professional Experience</h2>
+                <p>Bridging the gap between mathematical models, software engineering, and strategic analysis.</p>
+
+                <div class="experience-grid">
+                    
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>Research & VR Development Intern</h3>
+                            <span class="company">Advanced Optics Laboratory (UNAM)</span>
+                            <span class="date">Mar. 2026 – Present</span>
+                        </div>
+                        <p>Working on a high-precision VR optics simulator designed to replicate classical and quantum experiments in an interactive environment.</p>
+                        <ul>
+                            <li>Built a <strong>hybrid architecture</strong> combining <strong>Unity (C#)</strong> for real-time 3D systems and <strong>Python (NumPy)</strong> for numerical computation.</li>
+                            <li>Implemented large-scale <strong>Monte Carlo simulations</strong> (10M+ iterations) and statistical models.</li>
+                            <li>Applied <strong>object-oriented design</strong> and <strong>3D vector calculus</strong> to ensure physically consistent interactions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>AI Trainer – Language Models</h3>
+                            <span class="company">Outlier.org (Remote)</span>
+                            <span class="date">Mar. 2023 – Feb. 2025</span>
+                        </div>
+                        <p>Worked on improving the reasoning capabilities of large language models through structured data and evaluation.</p>
+                        <ul>
+                            <li>Designed complex prompts and step-by-step solutions for <strong>mathematical and linguistic tasks</strong>.</li>
+                            <li>Evaluated datasets to improve <strong>logical consistency</strong> and semantic accuracy in model outputs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>Clinical Research Intern</h3>
+                            <span class="company">Hospital Manuel Gea González</span>
+                            <span class="date">Jun. 2023 – Jan. 2024</span>
+                        </div>
+                        <p>Supported clinical research projects through data management and analysis.</p>
+                        <ul>
+                            <li>Maintained research databases under strict ethical and quality standards.</li>
+                            <li>Performed <strong>statistical analysis</strong> and built visualizations to support experimental decisions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>Data Analyst</h3>
+                            <span class="company">Zensitud – Online Psychology Platform</span>
+                            <span class="date">Jan. 2021 – Apr. 2022</span>
+                        </div>
+                        <p>Focused on understanding user behavior and improving business decisions through data.</p>
+                        <ul>
+                            <li>Analyzed behavioral data from 2,000+ users using <strong>Python and SQL</strong>.</li>
+                            <li>Built <strong>Power BI dashboards</strong> to monitor retention metrics, contributing to a <strong>10% increase in revenue</strong>.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="additional-exp-container">
+                    <h3 style="color: #fff; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">Additional Experience</h3>
+                    <ul class="additional-list">
+                        <li><strong>Chess Coach (Adult Training)</strong> <span class="year-badge">2025 – Present</span> <br>Train adult players through structured sessions focused on <strong>pattern recognition</strong>, strategic thinking, and decision-making under uncertainty.</li>
+                        <li><strong>Freelance Academic Editor</strong> <span class="year-badge">2020 – 2023</span> <br>Edited research papers (EN/ES) focusing on <strong>clarity, structure, and logical consistency</strong> in high-level academic writing.</li>
+                        <li><strong>Chess Teaching Assistant (UNAM)</strong> <span class="year-badge">2019 – 2020</span> <br>Coached competitive teams, breaking down complex positions into <strong>structured decision-making processes</strong>.</li>
+                        <li><strong>Contact Center Agent (Telvista)</strong> <span class="year-badge">2016 – 2017</span> <br>Resolved complex bilingual cases for Aeroméxico, requiring <strong>real-time problem-solving</strong> and clear communication under pressure.</li>
+                    </ul>
+                </div>
+
+                <ul class="actions stacked" style="margin-top: 4rem;">
+                    <li><a href="#projects" class="button smooth-scroll-middle">View Projects</a></li>
+                </ul>
+            </div>
+        </section>
+                        
+        <section class="wrapper style1 align-center" id="projects">
+            <div class="inner">
+                <h2>Featured Projects</h2>
+                <p>My work in Data Analysis, Business Intelligence, and Software Engineering.</p>
+                
+                <div class="gallery style2 medium lightbox onscroll-fade-in">
+                    
+                    <article>
+                        <a href="images/gallery/fulls/01.jpg" class="image">
+                            <img src="images/gallery/thumbs/01.jpg" alt="Superstore Analytics Dashboard" />
+                        </a>
+                        <div class="caption">
+                            <h3>Superstore BI & Analytics</h3>
+                            <p>End-to-end data pipeline processing 9,000+ records. Used <strong>Python (Pandas)</strong> for feature engineering and <strong>Power BI</strong> to uncover a critical -34% profit leak in Texas.</p>
+                            <ul class="actions fixed">
+                                <li><a href="project-superstore.html"  class="button small">View Project Details</a></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls/02.jpg" class="image">
+                            <img src="images/gallery/thumbs/02.jpg" alt="Chess Training Suite" />
+                        </a>
+                        <div class="caption">
+                            <h3>Modular Chess Training Suite</h3>
+                            <p>Object-Oriented Python application with an MVC architecture. Features custom statistical models, Lazy Loading, and Stockfish C++ Engine integration.</p>
+                            <ul class="actions fixed">
+                                <li><a href="project-chess.html" class="button small">View Project Details</a></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article>
+                    <a href="project_cybersecurity.html" class="image">
+                        <img src="images/gallery/thumbs/03.jpg" alt="Neural Threat Analyzer" />
+                    </a>
+                    <div class="caption">
+                        <h3>Neural Threat Analyzer</h3>
+                        <p>Hybrid AI engine designed to detect modern Phishing and SQL Injection attacks.</p>
+                        <ul class="actions fixed">
+                            <li><a href="project_cybersecurity.html" class="button small">View Project</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                </div>
+                <ul class="actions stacked">
+                    <li><a href="#technical-skills" class="button smooth-scroll-middle">Technical Skills</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="wrapper style1 align-center" id="technical-skills">
+            <div class="inner">
+                <h2>Technical Skills</h2>
+                
+                <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: center;">
+                    
+                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem; flex-grow: 1;">
+                                <span class="icon solid style2 major fa-chart-line" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
+                                <h3 style="margin-bottom: 1rem;">Data Analysis & Business Intelligence</h3>
+                                <p style="font-size: 0.9rem; text-align: left;">
+                                    <strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib), SQL, Power BI.<br><br>
+                                    <strong>What I do:</strong> Analyze user behavior and retention to identify growth opportunities and support data-driven business decisions through clear, actionable dashboards.
+                                </p>
+                            </div>
+                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
+                                <img src="images/gallery/fulls/04.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Data Analysis">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem; flex-grow: 1;">
+                                <span class="icon solid style2 major fa-brain" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
+                                <h3 style="margin-bottom: 1rem;">Machine Learning & AI</h3>
+                                <p style="font-size: 0.9rem; text-align: left;">
+                                    <strong>Tools:</strong> Scikit-learn, Prompt Engineering, LLM Evaluation.<br><br>
+                                    <strong>What I do:</strong> Build models for anomaly detection and classification, and improve reliability and consistency in AI-generated outputs.
+                                </p>
+                            </div>
+                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
+                                <img src="images/gallery/fulls/09.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Machine Learning">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem; flex-grow: 1;">
+                                <span class="icon solid style2 major fa-cube" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
+                                <h3 style="margin-bottom: 1rem;">Scientific Computing & Simulation</h3>
+                                <p style="font-size: 0.9rem; text-align: left;">
+                                    <strong>Tools:</strong> Python, Unity (C#), JSON pipelines.<br><br>
+                                    <strong>What I do:</strong> Design hybrid systems that combine real-time simulation with numerical computation to model complex physical systems with high precision.
+                                </p>
+                            </div>
+                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
+                                <img src="images/gallery/fulls/05.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Scientific Computing">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem; flex-grow: 1;">
+                                <span class="icon solid style2 major fa-square-root-alt" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
+                                <h3 style="margin-bottom: 1rem;">Applied Mathematics</h3>
+                                <p style="font-size: 0.9rem; text-align: left;">
+                                    <strong>Focus:</strong> Probability, statistical modeling, and vector calculus.<br><br>
+                                    <strong>What I do:</strong> Apply mathematical modeling to analyze uncertainty, simulate systems, and generate insights that support data-driven decision making.
+                                </p>
+                            </div>
+                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
+                                <img src="images/gallery/fulls/01.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Applied Mathematics">
+                            </div>
+                        </div> 
+                    </div> 
+                </div> 
+                <ul class="actions stacked" style="margin-top: 4rem; padding-bottom: 2rem;">
+                    <li><a href="#" class="button smooth-scroll">Back to Top</a></li>
+                </ul>
+            </div> 
+        </section> 
+        
+        <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
+
+        <footer class="wrapper style1 align-center">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:your_email@example.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <p>&copy; Luis Moto 2026.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
