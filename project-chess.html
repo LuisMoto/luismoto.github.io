@@ -10,9 +10,8 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=1">
     
     <style>
-        /* Color Palette: Grandmaster Gold (#c5a059) & Deep Charcoal */
+  
         
-        /* Header */
         .project-header {
             padding: 10rem 0;
             text-align: center;
@@ -28,7 +27,6 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            /* Gradient overlay for a more dramatic, premium feel */
             background: linear-gradient(135deg, rgba(11, 12, 16, 0.95) 0%, rgba(31, 40, 51, 0.8) 100%);
             z-index: 1;
         }
@@ -37,7 +35,6 @@
         .project-header h1 { color: #ffffff !important; letter-spacing: 2px; text-transform: uppercase;}
         .project-header p { color: #c5a059 !important; font-weight: 300; letter-spacing: 1px;}
 
-        /* Feature Grid */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -58,7 +55,7 @@
         .feature-item:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.04);
-            border-top: 4px solid #c5a059; /* Gold accent on hover */
+            border-top: 4px solid #c5a059; 
             box-shadow: 0 12px 30px rgba(0,0,0,0.4);
         }
 
@@ -70,7 +67,6 @@
             display: inline-block; 
         }
 
-        /* Tech Tags */
         .tech-tag { 
             display: inline-block; 
             background: transparent; 
@@ -84,7 +80,6 @@
             letter-spacing: 1px;
         }
 
-        /* Media Showcases (Images/Videos) */
         .img-showcase {
             border-radius: 8px;
             overflow: hidden;
@@ -94,7 +89,6 @@
             position: relative;
         }
 
-        /* Subtle glowing edge for the media containers */
         .img-showcase::after {
             content: '';
             position: absolute;
@@ -114,7 +108,6 @@
             opacity: 0.9;
         }
 
-        /* CTA Container for Case Study */
         .cta-container {
             background: linear-gradient(to right, #0b0c10, #1f2833);
             padding: 4rem 2rem;
@@ -133,20 +126,17 @@
             margin-bottom: 1rem;
         }
 
-        /* Custom hr separator */
         hr { 
             border-bottom: solid 1px rgba(255, 255, 255, 0.05); 
             margin: 4rem 0; 
         }
 
-        /* Small Button Overrides for this specific page */
         .actions .button.disabled {
             background-color: rgba(197, 160, 89, 0.1) !important;
             color: #c5a059 !important;
             border: 1px solid #c5a059 !important;
         }
 
-        /* Primary Button Overrides */
         .button-gold {
             background-color: #c5a059 !important;
             color: #0b0c10 !important; 
@@ -264,10 +254,10 @@
             <div class="inner">
                 <div class="cta-container">
                     <h2>Executive & Technical Case Study</h2>
-                    <p style="color: #000000; margin-bottom: 2rem;">A 4-page technical report exploring the modular architecture, Stockfish engine integration, and the mathematical modeling of the Elo system.</p>
+                    <p style="color: #ccc; margin-bottom: 2rem;">A 4-page technical report exploring the modular architecture, Stockfish engine integration, and the mathematical modeling of the Elo system.</p>
                     <ul class="actions" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 1rem;">
                         <li>
-                            <a href="assets/pdf/chess_training_suite_luis_moto.pdf" target="_blank" class="button primary big icon solid fa-download" style="background-color: #c5a059; color: #0b0c10; box-shadow: none;">
+                            <a href="assets/pdf/chess_training_suite_luis_moto.pdf" target="_blank" class="button big button-gold icon solid fa-download">
                                 Download Case Study (PDF)
                             </a>
                         </li>
