@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   
+    <title>Luis Moto | Data Scientist & Linguist</title>
 
-    <title>Luis Moto | Data Analyst & Applied Mathematics</title>
-
-    <meta name="description" content="Professional portfolio of Luis Moto. Data Analyst, Applied Mathematics student, and researcher focused on business intelligence, analytics, and data-driven problem solving.">
-    <meta name="keywords" content="Luis Moto, Data Analyst, Business Intelligence, Applied Mathematics, UNAM, Python, SQL, Power BI, Machine Learning">
+    <meta name="description" content="Portafolio profesional de Luis Moto. Lingüista de la UAM y Científico de Datos. Especialista en Análisis de Datos, NLP y soluciones de IA.">
+    <meta name="keywords" content="Luis Moto, UAM, Lingüística, Data Scientist, Data Analyst, Analista de Datos, Científico de Datos, NLP, Python, Machine Learning, Applied Mathematics, UNAM">
     <meta name="author" content="Luis Moto">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://luismoto.github.io/">
@@ -15,17 +15,17 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=1">
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
+   
     <style>
         .philosophy-quote {
             border-left: 4px solid #ffffff;
             padding: 1.5rem 2rem;
             background: rgba(255, 255, 255, 0.05);
-            font-size: 1rem;
+            font-style: italic;
+            font-size: 1.05rem;
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
-            color: #f2f2f2;
-            line-height: 1.7;
+            color: #fff;
         }
 
         .experience-grid {
@@ -39,7 +39,7 @@
         .exp-card {
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -47,43 +47,48 @@
         }
 
         .exp-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         .exp-card.color-1 {
             border-left: 4px solid #442c58;
-            background: linear-gradient(90deg, rgba(157, 78, 221, 0.06) 0%, rgba(255,255,255,0.02) 100%);
+            background: linear-gradient(90deg, rgba(157, 78, 221, 0.08) 0%, rgba(255,255,255,0.02) 100%);
         }
 
         .exp-card.color-2 {
             border-left: 4px solid #233e43;
-            background: linear-gradient(90deg, rgba(0, 180, 216, 0.06) 0%, rgba(255,255,255,0.02) 100%);
+            background: linear-gradient(90deg, rgba(0, 180, 216, 0.08) 0%, rgba(255,255,255,0.02) 100%);
         }
 
         .exp-card.color-3 {
+            border-left: 4px solid #113f3a;
+            background: linear-gradient(90deg, rgba(42, 157, 143, 0.08) 0%, rgba(255,255,255,0.02) 100%);
+        }
+
+        .exp-card.color-4 {
             border-left: 4px solid #2a3359;
-            background: linear-gradient(90deg, rgba(67, 97, 238, 0.06) 0%, rgba(255,255,255,0.02) 100%);
+            background: linear-gradient(90deg, rgba(67, 97, 238, 0.08) 0%, rgba(255,255,255,0.02) 100%);
         }
 
         .exp-header {
-            margin-bottom: 1.4rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
         }
 
         .exp-header h3 {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
             color: #fff;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
         }
 
         .exp-header .company {
-            color: #b5b5b5;
+            color: #aaa;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             display: block;
         }
 
@@ -92,8 +97,42 @@
             font-size: 0.8rem;
             display: block;
             margin-top: 0.5rem;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
         }
+
+        .additional-exp-container {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .additional-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .additional-list li {
+            margin-bottom: 1.2em;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 1.2em;
+        }
+       
+        .additional-list strong { color: #ffffff; }
+        .additional-list .year-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 0 0.5rem;
+        }
+
 
         .fab-cv {
             position: fixed;
@@ -116,8 +155,9 @@
         }
 
         .fab-cv:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             border-color: #9d4edd;
+            box-shadow: 0 8px 20px rgba(157, 78, 221, 0.2);
         }
 
         .fab-cv::after {
@@ -129,6 +169,7 @@
             padding: 6px 15px;
             border-radius: 4px;
             font-size: 13px;
+            letter-spacing: 1px;
             white-space: nowrap;
             opacity: 0;
             pointer-events: none;
@@ -143,208 +184,199 @@
 </head>
 <body class="is-preload">
 
-<div id="wrapper" class="divided">
+    <div id="wrapper" class="divided">
 
-    <section class="banner style2 orientation-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="home">
-        <div class="content">
-            <h1>Luis Moto</h1>
-            <p class="major">
-                Data Analyst and Applied Mathematics student focused on business intelligence, analytics, and practical problem solving.
-            </p>
-            <ul class="actions stacked">
-                <li><a href="#about-me" class="button big wide smooth-scroll-middle">Get Started</a></li>
-            </ul>
-        </div>
-        <div class="image">
-            <img src="images/banner.jpg" alt="Luis Moto" />
-        </div>
-    </section>
-
-    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="about-me">
-        <div class="content">
-            <h2>About Me</h2>
-
-            <p>
-                My academic background combines <strong>Linguistics</strong> and <strong>Applied Mathematics</strong>, two disciplines that shaped the way I approach information: as structure, pattern, and meaning.
-            </p>
-
-            <p>
-                Today, I focus on <strong>Business Intelligence and Data Analysis</strong>, working with tools such as <strong>Python, SQL, and Power BI</strong> to turn data into decisions. My projects often involve modeling, visualization, and process improvement, always with an emphasis on clarity and practical impact.
-            </p>
-
-            <div class="philosophy-quote">
-                Good analysis is not only about finding the answer. It is about making the answer understandable and useful for others.
-            </div>
-
-            <div style="margin-top: 2.5rem;">
-                <h3 style="font-size: 1.05rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">Beyond Work</h3>
-                <p style="font-size: 0.95rem; color: #bbb; line-height: 1.7;">
-                    Outside of analytics, I enjoy music, reading, and collaborative creative work. These interests continue to shape how I communicate ideas and approach complex problems from different perspectives.
+        <section class="banner style2 orientation-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="home">
+            <div class="content">
+                <h1>Luis Moto</h1>
+                <p class="major">
+                    Data Analyst & Applied Mathematics student focused on turning complex systems into clear, actionable insights.
                 </p>
+                <ul class="actions stacked">
+                    <li><a href="#about-me" class="button big wide smooth-scroll-middle">Get Started</a></li>
+                </ul>
             </div>
+            <div class="image">
+                <img src="images/banner.jpg" alt="Luis Moto" />
+            </div>
+        </section>
 
-            <ul class="actions stacked" style="margin-top: 2rem;">
-                <li><a href="#experience" class="button smooth-scroll-middle">See Experience</a></li>
-            </ul>
-        </div>
-        <div class="image">
-            <img src="images/spotlight01.jpg" alt="Luis Moto" />
-        </div>
-    </section>
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="about-me">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I’ve always been fascinated by how we structure information, whether through the rules of a language or the logic of an equation. My trajectory reflects this idea: I hold a <strong>B.A. in Linguistics (UAM)</strong> and I am currently pursuing a <strong>B.Sc. in Applied Mathematics at UNAM</strong>.</p>
+               
+                <p>I focus on <strong>Business Intelligence (BI) and Data Analysis</strong>, using tools like <strong>Python, SQL, and Power BI</strong> to transform disordered information into clear models and actionable decisions. In my recent projects, I have applied <strong>Machine Learning</strong> for pattern and anomaly detection, looking beyond the numbers to understand the system.</p>
+               
+                <div class="philosophy-quote">
+                    I believe a good analysis doesn’t end with the code and the dashboard. It ends when someone else can understand it, question it, and use it.
+                </div>
 
-    <section class="wrapper style1 align-center" id="education">
-        <div class="inner">
-            <h2>Education</h2>
-            <p>Interdisciplinary training in mathematics, language, and analytical reasoning.</p>
+                <div style="margin-top: 2.5rem;">
+                    <h3 style="font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">Beyond the Data</h3>
+                    <p style="font-size: 0.9rem; color: #bbb; line-height: 1.6;"><strong>Music & Books:</strong> I play bass and piano, and I really enjoy playing with friends—building something together in real time. Outside of that, I spend a lot of time reading. I gravitate toward Latin American authors like Borges or Cortázar, drawn to works that balance structure and freedom.</p>
+                </div>
+               
+                <ul class="actions stacked" style="margin-top: 2rem;">
+                    <li><a href="#experience" class="button smooth-scroll-middle">See Experience</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="images/spotlight01.jpg" alt="Luis Moto" />
+            </div>
+        </section>
 
-            <div class="row" style="margin-top: 3rem; text-align: left;">
-                <div class="col-6 col-12-medium">
-                    <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #3c3748; overflow: hidden; display: flex; flex-direction: column;">
-                        <div style="padding: 2.5rem;">
-                            <h3>B.Sc. in Applied Mathematics</h3>
-                            <h4>National Autonomous University of Mexico (UNAM)</h4>
-                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);"><em>2023 — Present</em></p>
-                            <p>Focused on mathematical modeling, computational methods, and data-oriented problem solving.</p>
+        <section class="wrapper style1 align-center" id="education">
+            <div class="inner">
+                <h2>Education & Academic Foundation</h2>
+                <p>A dual background in Applied Mathematics and Linguistics, bridging the gap between formal structures and computational modeling.</p>
+               
+                <div class="row" style="margin-top: 3rem; text-align: left;">
+                    <div class="col-6 col-12-medium">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #3c3748; overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="width: 100%; height: 200px; overflow: hidden;">
+                                <img src="images/gallery/fulls/08.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Mathematics">
+                            </div>
+                            <div style="padding: 2.5rem;">
+                                <h3>B.S. in Applied Mathematics</h3>
+                                <h4>National Autonomous University of Mexico (UNAM)</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);"><em>2023 — Present</em></p>
+                                <p>Focus on modeling and analyzing real-world problems through mathematical and computational tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #676054; overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="width: 100%; height: 200px; overflow: hidden;">
+                                <img src="images/gallery/fulls/12.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Linguistics">
+                            </div>
+                            <div style="padding: 2.5rem;">
+                                <h3>B.A. in Linguistics</h3>
+                                <h4>Autonomous Metropolitan University (UAM)</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.5);"><em>Graduate</em></p>
+                                <p>Training in the formal analysis of language as a structured system.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-6 col-12-medium">
-                    <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #676054; overflow: hidden; display: flex; flex-direction: column;">
-                        <div style="padding: 2.5rem;">
-                            <h3>Linguistics Studies</h3>
-                            <h4>Autonomous Metropolitan University (UAM)</h4>
-                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);"><em>Completed degree requirements</em></p>
-                            <p>Training in structured analysis, communication, and formal systems of language.</p>
+        <section class="wrapper style1 align-center" id="experience">
+            <div class="inner">
+                <h2>Professional Experience</h2>
+                <div class="experience-grid">
+                    <div class="exp-card color-1">
+                        <div class="exp-header">
+                            <h3>Research & VR Development Intern</h3>
+                            <span class="company">Advanced Optics Laboratory (UNAM)</span>
+                            <span class="date">Mar. 2026 – Present</span>
                         </div>
+                        <p>Working on a high-precision VR optics simulator.</p>
+                    </div>
+                    <div class="exp-card color-2">
+                        <div class="exp-header">
+                            <h3>AI Trainer – Language Models</h3>
+                            <span class="company">Outlier.org (Remote)</span>
+                            <span class="date">Mar. 2023 – Feb. 2025</span>
+                        </div>
+                        <p>Improving the reasoning capabilities of LLMs.</p>
+                    </div>
+                    <div class="exp-card color-4">
+                        <div class="exp-header">
+                            <h3>Data Analyst</h3>
+                            <span class="company">Zensitud</span>
+                            <span class="date">Jan. 2021 – Apr. 2022</span>
+                        </div>
+                        <p>Built dashboards monitoring retention metrics.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="wrapper style1 align-center" id="experience">
-        <div class="inner">
-            <h2>Experience</h2>
-
-            <div class="experience-grid">
-                <div class="exp-card color-1">
-                    <div class="exp-header">
-                        <h3>Research & VR Development Intern</h3>
-                        <span class="company">Advanced Optics Laboratory (UNAM)</span>
-                        <span class="date">2026 – Present</span>
-                    </div>
-                    <p>Supporting scientific simulation projects through computational modeling and virtual environments.</p>
-                </div>
-
-                <div class="exp-card color-2">
-                    <div class="exp-header">
-                        <h3>AI Trainer – Language Models</h3>
-                        <span class="company">Outlier (Remote)</span>
-                        <span class="date">2023 – 2025</span>
-                    </div>
-                    <p>Evaluated and improved model outputs for reasoning, language quality, and task consistency.</p>
-                </div>
-
-                <div class="exp-card color-3">
-                    <div class="exp-header">
-                        <h3>Data Analyst</h3>
-                        <span class="company">Zensitud</span>
-                        <span class="date">2021 – 2022</span>
-                    </div>
-                    <p>Developed dashboards and data-driven reports to support operational decisions.</p>
+        <section class="wrapper style1 align-center" id="projects">
+            <div class="inner">
+                <h2>Featured Projects</h2>
+                <div class="gallery style2 medium onscroll-fade-in">
+                    <article>
+                        <a href="project-superstore.html" class="image"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
+                        <div class="caption">
+                            <h3>Superstore BI & Analytics</h3>
+                            <ul class="actions fixed"><li><a href="project-superstore.html" class="button small">View Details</a></li></ul>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="project-chess.html" class="image"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
+                        <div class="caption">
+                            <h3>Chess Training Suite</h3>
+                            <ul class="actions fixed"><li><a href="project-chess.html" class="button small">View Details</a></li></ul>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="project_cybersecurity.html" target="_blank" class="image"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
+                        <div class="caption">
+                            <h3>Neural Threat Analyzer</h3>
+                            <ul class="actions fixed"><li><a href="project_cybersecurity.html" class="button small">View Details</a></li></ul>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="wrapper style1 align-center" id="projects">
-        <div class="inner">
-            <h2>Featured Projects</h2>
-
-            <div class="gallery style2 medium onscroll-fade-in">
-                <article>
-                    <a href="project-superstore.html" class="image"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-                    <div class="caption">
-                        <h3>Retail BI & Analytics</h3>
-                        <ul class="actions fixed"><li><a href="project-superstore.html" class="button small">View Details</a></li></ul>
+        <section class="wrapper style1 align-center" id="technical-skills">
+            <div class="inner">
+                <h2>Technical Skills</h2>
+                <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: center;">
+                    <div class="col-3 col-6-medium col-12-small">
+                        <span class="icon solid style2 major fa-chart-line"></span>
+                        <h3>BI & Analysis</h3>
                     </div>
-                </article>
-
-                <article>
-                    <a href="project-chess.html" class="image"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
-                    <div class="caption">
-                        <h3>Chess Training Suite</h3>
-                        <ul class="actions fixed"><li><a href="project-chess.html" class="button small">View Details</a></li></ul>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <span class="icon solid style2 major fa-brain"></span>
+                        <h3>ML & AI</h3>
                     </div>
-                </article>
-
-                <article>
-                    <a href="project_cybersecurity.html" class="image"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
-                    <div class="caption">
-                        <h3>Neural Threat Analyzer</h3>
-                        <ul class="actions fixed"><li><a href="project_cybersecurity.html" class="button small">View Details</a></li></ul>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <span class="icon solid style2 major fa-cube"></span>
+                        <h3>Simulation</h3>
                     </div>
-                </article>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <span class="icon solid style2 major fa-square-root-alt"></span>
+                        <h3>Mathematics</h3>
+                    </div>
+                </div>
+                <ul class="actions stacked" style="margin-top: 4rem; padding-bottom: 2rem;">
+                    <li><a href="#" class="button smooth-scroll">Back to Top</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+       
+        <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
 
-    <section class="wrapper style1 align-center" id="technical-skills">
-        <div class="inner">
-            <h2>Technical Skills</h2>
-
-            <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: center;">
-                <div class="col-3 col-6-medium col-12-small">
-                    <span class="icon solid style2 major fa-chart-line"></span>
-                    <h3>Business Intelligence</h3>
-                </div>
-                <div class="col-3 col-6-medium col-12-small">
-                    <span class="icon solid style2 major fa-brain"></span>
-                    <h3>Machine Learning</h3>
-                </div>
-                <div class="col-3 col-6-medium col-12-small">
-                    <span class="icon solid style2 major fa-cube"></span>
-                    <h3>Simulation</h3>
-                </div>
-                <div class="col-3 col-6-medium col-12-small">
-                    <span class="icon solid style2 major fa-square-root-alt"></span>
-                    <h3>Mathematical Modeling</h3>
-                </div>
+        <footer class="wrapper style1 align-center">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <p>&copy; Luis Moto 2026.</p>
             </div>
+        </footer>
 
-            <ul class="actions stacked" style="margin-top: 4rem; padding-bottom: 2rem;">
-                <li><a href="#home" class="button smooth-scroll">Back to Top</a></li>
-            </ul>
-        </div>
-    </section>
+    </div>
 
-    <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
+    
+    <a href="assets/pdf/luis_moto_cv.pdf" class="fab-cv" target="_blank">
+        <i class="icon solid fa-download"></i>
+    </a>
 
-    <footer class="wrapper style1 align-center">
-        <div class="inner">
-            <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
-            <p>&copy; Luis Moto 2026.</p>
-        </div>
-    </footer>
-
-</div>
-
-<a href="assets/pdf/luis_moto_cv.pdf" class="fab-cv" target="_blank">
-    <i class="icon solid fa-download"></i>
-</a>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
