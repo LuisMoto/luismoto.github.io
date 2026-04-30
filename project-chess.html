@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png?v=1">
     
     <style>
         /* Color Palette: Grandmaster Gold (#c5a059) & Deep Charcoal */
@@ -112,6 +112,25 @@
 
         .img-showcase:hover img, .img-showcase:hover video {
             opacity: 0.9;
+        }
+
+        /* CTA Container for Case Study */
+        .cta-container {
+            background: linear-gradient(to right, #0b0c10, #1f2833);
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            margin: 4rem 0;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cta-container h2 {
+            color: #ffffff !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: none;
+            margin-bottom: 1rem;
         }
 
         /* Custom hr separator */
@@ -238,10 +257,27 @@
                 <div class="img-showcase" style="max-width: 800px; margin: 2rem auto 0 auto;">
                     <img src="images/projects/chess_flash.png" alt="Chess Flashcard Interface" />
                 </div>
+            </div>
+        </section>
 
-                <ul class="actions stacked" style="margin-top: 4rem;">
-                    <li><a href="https://github.com/tu-usuario/tu-repo" target="_blank" class="button big button-gold">View Source Code on GitHub</a></li>
-                </ul>
+        <section class="wrapper style1">
+            <div class="inner">
+                <div class="cta-container">
+                    <h2>Executive & Technical Case Study</h2>
+                    <p style="color: #ccc; margin-bottom: 2rem;">A 4-page technical report exploring the modular architecture, Stockfish engine integration, and the mathematical modeling of the Elo system.</p>
+                    <ul class="actions" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <li>
+                            <a href="assets/pdf/chess_training_suite_luis_moto.pdf" target="_blank" class="button primary big icon solid fa-download" style="background-color: #c5a059; color: #0b0c10; box-shadow: none;">
+                                Download Case Study (PDF)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/LuisMoto/chess-training-suite" target="_blank" class="button big button-gold icon brands fa-github">
+                                View Source Code on GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
