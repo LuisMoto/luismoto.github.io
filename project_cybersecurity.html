@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Neural Threat Analyzer - Luis Moto</title>
+    <title>Neural Threat Analyzer v2.0 - Luis Moto</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -31,7 +31,7 @@
             text-align: center;
             position: relative;
             background-color: #000;
-            background-image: url('images/gallery/fulls/03.jpg');
+            background-image: url('images/gallery/fulls/03.jpg'); /* Puedes cambiar el fondo si lo deseas */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -156,13 +156,14 @@
 
     <section class="project-header">
         <div class="inner">
-            <a href="index.html#projects" class="button small">← Back to Portfolio</a>
-            <h1 style="margin-top: 2rem;">Neural Threat Analyzer</h1>
-            <p class="major">Hybrid Machine Learning System for Threat Detection</p>
+            <a href="index.html#projects" class="button small">← Regresar al Portafolio</a>
+            <h1 style="margin-top: 2rem;">Neural Threat Analyzer v2.0</h1>
+            <p class="major">Modelo de Deep Learning para Clasificación Multiclase de Amenazas</p>
             <div class="tags">
                 <span class="tech-tag">PYTHON 3.12</span>
+                <span class="tech-tag">TENSORFLOW</span>
+                <span class="tech-tag">KERAS</span>
                 <span class="tech-tag">SCIKIT-LEARN</span>
-                <span class="tech-tag">SPACY</span>
                 <span class="tech-tag">STREAMLIT</span>
                 <span class="tech-tag">CUSTOMTKINTER</span>
             </div>
@@ -172,10 +173,10 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="cta-container">
-                <h2>Executive & Technical Case Study</h2>
-                <p>A 6-page technical audit exploring business impact, hybrid threat detection methodology, and strategic cybersecurity roadmaps.</p>
+                <h2>Reporte Técnico del Proyecto</h2>
+                <p>Documentación académica detallando el muestreo de datos, topología de la red, funciones de pérdida y estrategias de prevención de overfitting implementadas.</p>
                 <ul class="actions stacked align-center">
-                    <li><a href="assets/pdf/Case_Study_Neural_Threat_Analyzer_Luis_Moto.pdf" target="_blank" class="button primary big">Download Full Report (PDF)</a></li>
+                    <li><a href="assets/pdf/Reporte_Tecnico_Neural_Threat_Analyzer.pdf" target="_blank" class="button primary big">Descargar Documento (PDF)</a></li>
                 </ul>
             </div>
         </div>
@@ -185,16 +186,16 @@
         <div class="inner">
             <div class="row">
                 <div class="col-6 col-12-medium">
-                    <h2>The Security Problem</h2>
+                    <h2>Planteamiento del Problema</h2>
                     <p>
-                        Traditional filters often depend on static keyword detection, making them vulnerable to obfuscated phishing attempts and structured payload attacks. This project addresses that limitation by combining language-based signals with structural indicators to improve threat classification.
+                        La detección automatizada de amenazas en texto no estructurado es un desafío debido a la variabilidad del lenguaje. Este proyecto construye una red neuronal capaz de clasificar correos electrónicos en tres categorías (Seguro, Phishing, Inyección SQL) procesando simultáneamente secuencias de palabras y características estructurales, alcanzando una precisión del 99.16%.
                     </p>
                 </div>
                 <div class="col-6 col-12-medium">
                     <div class="insight-card">
-                        <h3>Data Engineering Strategy</h3>
+                        <h3>Muestreo y Data Augmentation</h3>
                         <p>
-                            A custom dataset was assembled by merging modern phishing corpora, safe corporate communication, and SQL injection payloads. A strict undersampling strategy ensured balanced representation across the three target classes.
+                            Se utilizó submuestreo (undersampling) para balancear el corpus a 11,340 muestras por clase. Al detectar un sesgo algorítmico que asociaba el idioma español con la clase "Segura", se aplicó <i>Data Augmentation</i> inyectando 1,200 muestras sintéticas de Phishing en español para equilibrar los pesos léxicos de la red.
                         </p>
                     </div>
                 </div>
@@ -206,31 +207,31 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center">
-                <h2>Technical Architecture</h2>
+                <h2>Topología de la Red (Doble Entrada)</h2>
                 <p>
-                    The detection engine uses a hybrid feature pipeline that combines semantic representation with handcrafted structural indicators.
+                    El diseño implementa una arquitectura híbrida en Keras que combina representaciones semánticas con extracción manual de características de dominio.
                 </p>
             </div>
 
             <div class="feature-grid">
                 <div class="feature-item">
-                    <h3>NLP Processing</h3>
+                    <h3>Rama NLP (Transformer)</h3>
                     <p>
-                        Text is normalized and cleaned using SpaCy. An input-length control mechanism safely handles oversized payloads without exhausting system memory.
+                        Una capa de Embedding entrenada desde cero, conectada a un bloque de Multi-Head Attention, permite al modelo capturar el contexto semántico sin depender de modelos preentrenados que ignoran caracteres especiales.
                     </p>
                 </div>
 
                 <div class="feature-item">
-                    <h3>Hybrid Vectorization</h3>
+                    <h3>Extracción y MaxPooling</h3>
                     <p>
-                        A TF-IDF vectorizer captures vocabulary and n-gram patterns, while engineered binary features identify structural signals such as URLs, SQL operators, and urgency markers.
+                        Se reemplazó el AveragePooling por <code>GlobalMaxPooling1D</code> para evitar que ataques cortos de inyección SQL se diluyan matemáticamente dentro de textos conversacionales largos.
                     </p>
                 </div>
 
                 <div class="feature-item">
-                    <h3>Interpretable Classification</h3>
+                    <h3>Regularización y Optimización</h3>
                     <p>
-                        Logistic Regression was selected for its performance in sparse high-dimensional data and its ability to provide probabilistic confidence scores for downstream analysis.
+                        Entrenado con optimizador Adam y función de pérdida sparse categorical crossentropy. Se aplicaron capas Dropout (0.1 y 0.2), BatchNormalization y el callback de <code>EarlyStopping</code> para suprimir eficazmente el overfitting.
                     </p>
                 </div>
             </div>
@@ -240,26 +241,31 @@
 
     <section class="wrapper style1">
         <div class="inner align-center">
-            <h2>Real-Time Detection Interface</h2>
+            <h2>Pruebas de Inferencia en Tiempo Real</h2>
             <p>
-                A desktop application built with CustomTkinter enables real-time evaluation of suspicious payloads with color-coded threat outputs.
+                Interfaz desarrollada en CustomTkinter para la evaluación del modelo con nuevos datos. Las métricas de backend muestran la extracción de vectores y preprocesamiento en vivo.
             </p>
 
             <div class="gui-gallery">
                 <div class="gui-item">
-                    <img src="images/projects/cyber_safe.png" alt="Safe Detection">
-                    <div class="gui-caption"><strong>Safe Content</strong><br>Legitimate communication identified</div>
+                    <img src="images/projects/noramlespa.png" alt="Detección de Texto Seguro">
+                    <div class="gui-caption"><strong>Clase 0: Seguro</strong><br>Comunicación corporativa legítima</div>
                 </div>
 
                 <div class="gui-item">
-                    <img src="images/projects/cyber_phishing.png" alt="Phishing Detection">
-                    <div class="gui-caption"><strong>Phishing Attempt</strong><br>Social engineering indicators detected</div>
+                    <img src="images/projects/pishespa.png" alt="Detección de Phishing">
+                    <div class="gui-caption"><strong>Clase 1: Phishing</strong><br>Detección de urgencia e ingeniería social</div>
                 </div>
 
                 <div class="gui-item">
-                    <img src="images/projects/cyber_sqli.png" alt="SQL Injection Detection">
-                    <div class="gui-caption"><strong>SQL Injection</strong><br>Malicious syntax recognized</div>
+                    <img src="images/projects/sinjespa.png" alt="Detección SQLi">
+                    <div class="gui-caption"><strong>Clase 2: Inyección SQL</strong><br>Identificación de sintaxis ofuscada en texto</div>
                 </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <img src="images/projects/muestras.png" alt="Extracción de backend" style="width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.9rem; color: #ccc; margin-top: 0.5rem;">Preprocesamiento de texto y extracción de vectores de 14 características en backend.</p>
             </div>
             <hr />
         </div>
@@ -268,40 +274,17 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center">
-                <h2>Model Monitoring & Explainability Dashboard</h2>
+                <h2>Dashboard de Desempeño y Explicabilidad</h2>
                 <p>
-                    A Streamlit dashboard was developed to monitor performance, analyze prediction behavior, and improve interpretability for technical stakeholders.
+                    Tablero interactivo desarrollado en Streamlit para visualizar métricas, matrices de confusión y evaluar la pérdida/exactitud en cada ciclo de validación.
                 </p>
             </div>
 
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>Performance Monitoring</h3>
-                    <p>
-                        Tracks accuracy, cross-validation results, and class-level metrics to assess model stability over time.
-                    </p>
-                </div>
-
-                <div class="feature-item">
-                    <h3>Error Analysis</h3>
-                    <p>
-                        Uses confusion matrices and misclassification logs to identify false positives and improve detection thresholds.
-                    </p>
-                </div>
-
-                <div class="feature-item">
-                    <h3>Feature Importance</h3>
-                    <p>
-                        Highlights the lexical and structural signals that contribute most strongly to predictions, improving interpretability in model decision-making.
-                    </p>
-                </div>
-            </div>
-
             <div class="dashboard-img-container">
-            <iframe 
-                src="https://luis-moto-threat-analyzer.streamlit.app/?embed=true&embed_options=dark_theme" 
-                style="width: 100%; height: 850px; border: none; border-radius: 15px;">
-            </iframe>
+                <iframe 
+                    src="http://localhost:8501/?embed=true&embed_options=dark_theme" 
+                    style="width: 100%; height: 850px; border: none; border-radius: 15px;">
+                </iframe>
             </div>
             <hr />
         </div>
@@ -312,22 +295,22 @@
             <div class="row">
                 <div class="col-6 col-12-medium">
                     <div class="insight-card" style="border-left-color: #09281d">
-                        <h3>Key Technical Finding</h3>
+                        <h3>Análisis de Falsos Positivos</h3>
                         <p>
-                            During testing, a feature dominance bias was observed around URL-related signals. Because phishing datasets strongly associate links with malicious intent, benign URLs may trigger false positives when isolated from contextual language.
+                            Al evaluar la inferencia, se detectó una fuerte correlación estadística aprendida hacia vocabulario como "urgente" o "password". Un ataque de Inyección SQL camuflado en un texto de soporte técnico intenso puede ser clasificado incorrectamente como Phishing, revelando el peso superior de la capa de atención sobre el Max Pooling en contextos específicos.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-6 col-12-medium">
-                    <h2>Limitations & Future Work</h2>
+                    <h2>Conclusiones del Proyecto</h2>
                     <p>
-                        Future iterations will focus on reducing feature bias and strengthening contextual awareness:
+                        El desarrollo del sistema evidenció la eficacia de una arquitectura de doble entrada para problemas complejos de ciberseguridad:
                     </p>
                     <ul>
-                        <li>Augment the safe dataset with benign URLs to improve balance.</li>
-                        <li>Integrate external reputation checks through threat intelligence APIs.</li>
-                        <li>Expand explainability modules for analyst-facing reporting.</li>
+                        <li>El uso estricto de callbacks evitó el memorizado de datos en las épocas avanzadas.</li>
+                        <li>Las arquitecturas personalizadas son preferibles al <i>Transfer Learning</i> generalista cuando se requiere detectar sintaxis específica.</li>
+                        <li>La inyección de datos sintéticos es una solución altamente efectiva para los sesgos iniciales de recolección.</li>
                     </ul>
                 </div>
             </div>
@@ -335,7 +318,7 @@
             <ul class="actions stacked" style="margin-top: 4rem; text-align: center;">
                 <li>
                     <a href="https://github.com/LuisMoto/neural-threat-analyzer" target="_blank" class="button primary big">
-                        View Source Code on GitHub
+                        Ver Código Fuente en GitHub
                     </a>
                 </li>
             </ul>
