@@ -48,6 +48,23 @@
         .project-header .inner { position: relative; z-index: 2; }
         .project-header h1, .project-header p { color: #ffffff !important; }
 
+        .authors-container {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .authors-container a {
+            color: #ffffff !important;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+            transition: border-bottom-color 0.2s ease;
+        }
+
+        .authors-container a:hover {
+            border-bottom-color: #ffffff;
+        }
+
         .insight-card {
             background: rgba(255,255,255,0.05);
             padding: 2rem;
@@ -184,6 +201,9 @@
         <div class="inner">
             <a href="index.html#projects" class="button small">← Back to Portfolio</a>
             <h1 style="margin-top: 2rem; font-size: 2.5rem;">Hybrid Threat Detection at the Application Layer</h1>
+            <div class="authors-container">
+                By <a href="https://github.com/LuisMoto" target="_blank">Luis Armando Macías Moto</a> and <a href="https://github.com/Sleepswimmings" target="_blank">Nathalia Jazmín Ballesteros Luna</a>
+            </div>
             <div class="tags" style="margin-top: 2rem;">
                 <span class="tech-tag">PYTHON 3.12</span>
                 <span class="tech-tag">TENSORFLOW</span>
@@ -213,14 +233,14 @@
                 <div class="col-6 col-12-medium">
                     <h2>The Problem</h2>
                     <p>
-                        This was my final project for Introduction to Neural Networks (UNAM, 2026). The goal was to build a classifier that could distinguish between three types of text: legitimate email (0), phishing attempts (1), and SQL injection payloads (2). The model processes both the raw text sequence and a vector of hand-engineered structural features in parallel, reaching 99.13% accuracy on the held-out test set.
+                        This was our joint final project for Introduction to Neural Networks (UNAM, 2026). The goal was to build a classifier that could distinguish between three types of text: legitimate email (0), phishing attempts (1), and SQL injection payloads (2). The model processes both the raw text sequence and a vector of hand-engineered structural features in parallel, reaching 99.13% accuracy on the held-out test set.
                     </p>
                 </div>
                 <div class="col-6 col-12-medium">
                     <div class="insight-card">
                         <h3>Sampling and Data Augmentation</h3>
                         <p>
-                            I used undersampling to balance the corpus to 11,340 samples per class. During inference testing — not during the initial design — I noticed the model was associating Spanish-language text with the "Safe" class, because the available phishing datasets were almost entirely in English. To fix that bias, I generated synthetic Spanish-language phishing samples (with and without links) and re-ran the full data pipeline and training. It was an extra iteration I hadn't planned for, but it was a useful reminder that dataset language coverage matters as much as class balance.
+                            We used undersampling to balance the corpus to 11,340 samples per class. During inference testing — not during the initial design — we noticed the model was associating Spanish-language text with the "Safe" class, because the available phishing datasets were almost entirely in English. To fix that bias, we generated synthetic Spanish-language phishing samples (with and without links) and re-ran the full data pipeline and training. It was an extra iteration we hadn't planned for, but it was a useful reminder that dataset language coverage matters as much as class balance.
                         </p>
                     </div>
                 </div>
@@ -242,14 +262,14 @@
                 <div class="feature-item">
                     <h3>NLP Branch (Transformer)</h3>
                     <p>
-                        An Embedding layer trained from scratch feeds into a Multi-Head Attention block, letting the model capture semantic context without relying on pretrained weights. I chose to train a custom embedding rather than using something like RoBERTa or BERT because those models are optimized for natural human language and tend to discard special characters — single quotes, asterisks, double dashes — as noise. In SQL injection detection, those exact characters are the signal.
+                        An Embedding layer trained from scratch feeds into a Multi-Head Attention block, letting the model capture semantic context without relying on pretrained weights. We chose to train a custom embedding rather than using something like RoBERTa or BERT because those models are optimized for natural human language and tend to discard special characters — single quotes, asterisks, double dashes — as noise. In SQL injection detection, those exact characters are the signal.
                     </p>
                 </div>
 
                 <div class="feature-item">
                     <h3>Sequence Reduction and MaxPooling</h3>
                     <p>
-                        I replaced GlobalAveragePooling1D with GlobalMaxPooling1D to prevent short attack payloads from getting mathematically diluted inside longer conversational text. Averaging was smoothing out the attack token values; max pooling preserves the highest activation peak in the sequence regardless of where it appears.
+                        We replaced GlobalAveragePooling1D with GlobalMaxPooling1D to prevent short attack payloads from getting mathematically diluted inside longer conversational text. Averaging was smoothing out the attack token values; max pooling preserves the highest activation peak in the sequence regardless of where it appears.
                     </p>
                 </div>
 
@@ -268,7 +288,7 @@
         <div class="inner">
             <div class="align-center" style="margin-bottom: 3rem;">
                 <h2>Implementation Decisions</h2>
-                <p>These are the specific decisions I made during iterative development. Each one solved a concrete problem that showed up during testing.</p>
+                <p>These are the specific decisions we made during iterative development. Each one solved a concrete problem that showed up during testing.</p>
             </div>
             
             <div class="row">
@@ -378,15 +398,15 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
                     <div class="insight-card" style="border-left-color: #09281d">
                         <h3>A Note on False Positives</h3>
                         <p>
-                            During inference testing, I noticed the model had developed sensitivity to words like "urgent" or "password". A SQL injection payload embedded inside a message with heavy social engineering language could get misclassified as phishing, because the accumulated weight of alarm-word tokens in the attention layer outweighed the SQL token's MaxPooling activation. It's an interesting edge case that shows how the two branches interact — and a good argument for keeping the confusion matrix visible rather than just reporting the headline accuracy.
+                            During inference testing, we noticed the model had developed sensitivity to words like "urgent" or "password". A SQL injection payload embedded inside a message with heavy social engineering language could get misclassified as phishing, because the accumulated weight of alarm-word tokens in the attention layer outweighed the SQL token's MaxPooling activation. It's an interesting edge case that shows how the two branches interact — and a good argument for keeping the confusion matrix visible rather than just reporting the headline accuracy.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-6 col-12-medium">
-                    <h2>What I took away from this</h2>
+                    <h2>What we took away from this</h2>
                     <p>
-                        A few things that stuck with me from building this:
+                        A few things that stuck with us from building this:
                     </p>
                     <ul>
                         <li>Callbacks handled overfitting cleanly without manual intervention once they were configured correctly — EarlyStopping and ReduceLROnPlateau did most of the work.</li>
@@ -410,11 +430,12 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
     <footer class="wrapper style1 align-center">
         <div class="inner">
             <ul class="icons">
+                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">Luis's GitHub</span></a></li>
+                <li><a href="https://github.com/Sleepswimmings" target="_blank" class="icon brands style2 fa-github"><span class="label">Nathalia's GitHub</span></a></li>
                 <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
                 <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
             </ul>
-            <p>&copy; Luis Moto 2026.</p>
+            <p>&copy; 2026. Developed by Luis Moto & Nathalia Jazmín Ballesteros Luna.</p>
         </div>
     </footer>
 
