@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>Modelo Transformer para la detección de correos electrónicos maliciosos</title>
+    <title>Hybrid Threat Detection at the Application Layer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -182,8 +182,8 @@
 
     <section class="project-header">
         <div class="inner">
-            <a href="index.html#projects" class="button small">← Regresar al Portafolio</a>
-            <h1 style="margin-top: 2rem; font-size: 2.5rem;">Modelo Transformer para la detección de correos electrónicos maliciosos</h1>
+            <a href="index.html#projects" class="button small">← Back to Portfolio</a>
+            <h1 style="margin-top: 2rem; font-size: 2.5rem;">Hybrid Threat Detection at the Application Layer</h1>
             <div class="tags" style="margin-top: 2rem;">
                 <span class="tech-tag">PYTHON 3.12</span>
                 <span class="tech-tag">TENSORFLOW</span>
@@ -198,10 +198,10 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="cta-container">
-                <h2>Reporte Técnico del Proyecto</h2>
-                <p>Documentación académica detallando el muestreo de datos, topología de la red, funciones de pérdida y estrategias de prevención de overfitting implementadas.</p>
+                <h2>Technical Report</h2>
+                <p>Academic documentation covering data sampling, network topology, loss functions, and the overfitting prevention strategies used throughout the project.</p>
                 <ul class="actions stacked align-center">
-                    <li><a href="assets/pdf/Reporte_Tecnico.pdf" target="_blank" class="button primary big">Descargar Documento (PDF)</a></li>
+                    <li><a href="assets/pdf/neural_threat_analyzer.pdf" target="_blank" class="button primary big">Download Document (PDF)</a></li>
                 </ul>
             </div>
         </div>
@@ -211,16 +211,16 @@
         <div class="inner">
             <div class="row">
                 <div class="col-6 col-12-medium">
-                    <h2>Planteamiento del Problema</h2>
+                    <h2>The Problem</h2>
                     <p>
-                        Como proyecto final de la materia Introducción a Redes Neuronales (UNAM, 2026), se desarrolló una red neuronal capaz de clasificar correos electrónicos en tres categorías: Seguro (0), Phishing (1) e Inyección SQL (2). El modelo procesa simultáneamente la secuencia de texto y un vector de características estructurales extraídas manualmente, alcanzando una precisión del 99.37% en el conjunto de prueba.
+                        This was my final project for Introduction to Neural Networks (UNAM, 2026). The goal was to build a classifier that could distinguish between three types of text: legitimate email (0), phishing attempts (1), and SQL injection payloads (2). The model processes both the raw text sequence and a vector of hand-engineered structural features in parallel, reaching 99.13% accuracy on the held-out test set.
                     </p>
                 </div>
                 <div class="col-6 col-12-medium">
                     <div class="insight-card">
-                        <h3>Muestreo y Data Augmentation</h3>
+                        <h3>Sampling and Data Augmentation</h3>
                         <p>
-                            Se utilizó submuestreo (undersampling) para balancear el corpus a 11,340 muestras por clase. Durante las pruebas de inferencia — no en el diseño inicial — se identificó que el modelo asociaba el idioma español con la clase "Segura", ya que los datasets de phishing disponibles estaban en inglés. Para corregir este sesgo, se aplicó Data Augmentation inyectando muestras sintéticas de phishing en español (con y sin enlaces), lo que generó una iteración adicional completa del pipeline de datos y reentrenamiento.
+                            I used undersampling to balance the corpus to 11,340 samples per class. During inference testing — not during the initial design — I noticed the model was associating Spanish-language text with the "Safe" class, because the available phishing datasets were almost entirely in English. To fix that bias, I generated synthetic Spanish-language phishing samples (with and without links) and re-ran the full data pipeline and training. It was an extra iteration I hadn't planned for, but it was a useful reminder that dataset language coverage matters as much as class balance.
                         </p>
                     </div>
                 </div>
@@ -232,31 +232,31 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center">
-                <h2>Topología de la Red (Doble Entrada)</h2>
+                <h2>Network Topology (Dual-Input)</h2>
                 <p>
-                    El modelo implementa una arquitectura de doble entrada en Keras que combina un bloque Transformer para procesamiento de texto con una red densa para características de dominio extraídas manualmente.
+                    The model uses a dual-input Keras architecture that combines a Transformer block for text processing with a dense branch for manually extracted domain features.
                 </p>
             </div>
 
             <div class="feature-grid">
                 <div class="feature-item">
-                    <h3>Rama NLP (Transformer)</h3>
+                    <h3>NLP Branch (Transformer)</h3>
                     <p>
-                        Una capa de Embedding entrenada desde cero, conectada a un bloque de Multi-Head Attention, permite al modelo capturar el contexto semántico sin depender de modelos preentrenados. Se eligió entrenar el Embedding propio en lugar de usar modelos como RoBERTa o BERT porque estos están optimizados para lenguaje natural humano e ignoran caracteres especiales como comillas simples, asteriscos o guiones dobles, que son precisamente la sintaxis que distingue una inyección SQL de texto ordinario.
+                        An Embedding layer trained from scratch feeds into a Multi-Head Attention block, letting the model capture semantic context without relying on pretrained weights. I chose to train a custom embedding rather than using something like RoBERTa or BERT because those models are optimized for natural human language and tend to discard special characters — single quotes, asterisks, double dashes — as noise. In SQL injection detection, those exact characters are the signal.
                     </p>
                 </div>
 
                 <div class="feature-item">
-                    <h3>Extracción y MaxPooling</h3>
+                    <h3>Sequence Reduction and MaxPooling</h3>
                     <p>
-                        Se reemplazó GlobalAveragePooling1D por GlobalMaxPooling1D para evitar que ataques cortos de inyección SQL se diluyan matemáticamente dentro de textos conversacionales largos. El promedio atenuaba el valor de tokens de ataque; el máximo preserva el pico de activación más alto de la secuencia.
+                        I replaced GlobalAveragePooling1D with GlobalMaxPooling1D to prevent short attack payloads from getting mathematically diluted inside longer conversational text. Averaging was smoothing out the attack token values; max pooling preserves the highest activation peak in the sequence regardless of where it appears.
                     </p>
                 </div>
 
                 <div class="feature-item">
-                    <h3>Regularización y Optimización</h3>
+                    <h3>Regularization and Optimization</h3>
                     <p>
-                        Entrenado con optimizador Adam (lr=0.001) y función de pérdida <code>sparse_categorical_crossentropy</code>. Se aplicaron capas Dropout (0.1 y 0.2), BatchNormalization y los callbacks EarlyStopping, ReduceLROnPlateau y ModelCheckpoint para controlar el overfitting y guardar únicamente el mejor modelo.
+                        Trained with Adam (lr=0.001) and <code>sparse_categorical_crossentropy</code> loss. Dropout layers (0.1 and 0.2), BatchNormalization, and the callbacks EarlyStopping, ReduceLROnPlateau, and ModelCheckpoint kept overfitting in check and ensured only the best checkpoint was saved.
                     </p>
                 </div>
             </div>
@@ -267,16 +267,16 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center" style="margin-bottom: 3rem;">
-                <h2>Decisiones de Implementación</h2>
-                <p>Las siguientes decisiones fueron tomadas durante el desarrollo iterativo del proyecto. Cada una resolvió un problema concreto identificado en las pruebas.</p>
+                <h2>Implementation Decisions</h2>
+                <p>These are the specific decisions I made during iterative development. Each one solved a concrete problem that showed up during testing.</p>
             </div>
             
             <div class="row">
                 <div class="col-6 col-12-medium" style="margin-bottom: 2rem;">
                     <div class="insight-card">
-                        <h3>1. GlobalMaxPooling1D en lugar de GlobalAveragePooling1D</h3>
-                        <p>Cuando un ataque SQLi aparece en un correo conversacional largo (ej. "Creo que encontré un bug, si escribo admin' OR 1=1 -- el sistema me deja entrar"), el promedio de los 40+ tokens inofensivos diluía el valor del token de ataque a casi cero. Al usar MaxPooling, el modelo toma el valor máximo por dimensión del embedding, preservando la señal más fuerte sin importar dónde aparezca en la secuencia.</p>
-<pre class="code-snippet"><code><span class="comment"># Rama de NLP (Transformer) - Sustitución del pooling</span>
+                        <h3>1. GlobalMaxPooling1D instead of GlobalAveragePooling1D</h3>
+                        <p>When a SQL injection payload appears inside a long conversational email (e.g. "I think I found a bug — if I type admin' OR 1=1 -- the system just lets me in"), the average of 40+ harmless tokens was reducing the attack token's signal to near zero. With MaxPooling, the model takes the highest value per embedding dimension, keeping the strongest signal regardless of where it lands in the sequence.</p>
+<pre class="code-snippet"><code><span class="comment"># NLP branch — replacing the pooling layer</span>
 <span class="comment"># text_vec = layers.GlobalAveragePooling1D()(seq_out)</span>
 text_vec = layers.<span class="function">GlobalMaxPooling1D</span>()(seq_out)
 text_dense = layers.<span class="function">Dense</span>(16, activation=<span class="string">"relu"</span>)(text_vec)</code></pre>
@@ -284,21 +284,21 @@ text_dense = layers.<span class="function">Dense</span>(16, activation=<span cla
                 </div>
                 <div class="col-6 col-12-medium" style="margin-bottom: 2rem;">
                     <div class="insight-card">
-                        <h3>2. Arquitectura de doble entrada para conectar features.py al modelo</h3>
-                        <p>En la versión original, <code>features.py</code> existía pero nunca se llamaba desde <code>trainer.py</code> ni desde <code>inference_engine.py</code>. El modelo de entrada única ignoraba por completo las 14 características manuales. Al agregar un segundo Input y concatenar ambas ramas antes del clasificador final, las features de dominio (URLs sospechosas, tokens SQLi, densidad de vocabulario de phishing) se integran al proceso de decisión.</p>
-<pre class="code-snippet"><code><span class="comment"># Rama 2: Características extraídas manualmente</span>
+                        <h3>2. Dual-input architecture to actually connect features.py</h3>
+                        <p>In the original version, <code>features.py</code> existed but was never called from <code>trainer.py</code> or <code>inference_engine.py</code>. The single-input model was completely ignoring the 14 hand-crafted features. Adding a second Input and concatenating both branches before the final classifier meant that domain signals — suspicious URLs, SQL tokens, phishing keyword density — actually participate in the decision.</p>
+<pre class="code-snippet"><code><span class="comment"># Branch 2: manually extracted features</span>
 feat_input = <span class="function">Input</span>(shape=(N_FEATURES,), name=<span class="string">"feat_input"</span>)
 feat_out = layers.<span class="function">Dense</span>(16, activation=<span class="string">"relu"</span>)(feat_input)
 
-<span class="comment"># Fusión de ramas y clasificador</span>
+<span class="comment"># Merge and classify</span>
 concat = layers.<span class="function">Concatenate</span>()([text_dense, feat_out])
 outputs = layers.<span class="function">Dense</span>(3, activation=<span class="string">"softmax"</span>)(concat)</code></pre>
                     </div>
                 </div>
                 <div class="col-6 col-12-medium" style="margin-bottom: 2rem;">
                     <div class="insight-card">
-                        <h3>3. Tokenización estructural de URLs en lugar de eliminarlas</h3>
-                        <p>Eliminar URLs del texto perdía información crítica. En cambio, <code>preprocessing.py</code> analiza la estructura de cada URL y la reemplaza por un token semántico que el modelo aprende a interpretar. Dominios de confianza como github.com generan <code>url_safe_domain</code>, mientras que IPs directas generan <code>url_ip_detected</code>. Esto permite que el modelo distinga entre un enlace de GitHub legítimo y un enlace de phishing con dominio sospechoso.</p>
+                        <h3>3. Structural URL tokenization instead of stripping URLs</h3>
+                        <p>Removing URLs from the text was losing critical information. Instead, <code>preprocessing.py</code> analyzes each URL's structure and replaces it with a semantic token the model can learn from. Trusted domains like github.com become <code>url_safe_domain</code>; bare IP addresses become <code>url_ip_detected</code>. This lets the model distinguish a legitimate GitHub link from a phishing link with a lookalike domain.</p>
 <pre class="code-snippet"><code><span class="keyword">if</span> is_safe_domain(domain):
     text = text.<span class="function">replace</span>(url, <span class="string">" url_safe_domain "</span>)
 <span class="keyword">elif</span> re.<span class="function">match</span>(<span class="string">r"^\d{1,3}(\.\d{1,3}){3}$"</span>, domain):
@@ -309,9 +309,9 @@ outputs = layers.<span class="function">Dense</span>(3, activation=<span class="
                 </div>
                 <div class="col-6 col-12-medium" style="margin-bottom: 2rem;">
                     <div class="insight-card">
-                        <h3>4. Corrección del regex de URLs</h3>
-                        <p>El regex original <code>http\S+</code> solo capturaba URLs con protocolo explícito. La mayoría de los correos de phishing reales usan URLs como www.banco-seguro.xyz/login o dominios directos sin http://, por lo que pasaban sin tokenizarse y el modelo las leía como texto ordinario. El regex corregido cubre las tres formas más comunes de URL en correos electrónicos.</p>
-<pre class="code-snippet"><code><span class="comment"># Expresión regular actualizada para capturar variaciones</span>
+                        <h3>4. Fixing the URL regex</h3>
+                        <p>The original regex <code>http\S+</code> only caught URLs with an explicit protocol. Most real phishing emails use URLs like www.banco-seguro.xyz/login or bare domains without http://, so they were passing through untokenized and being read as plain text. The updated pattern covers the three most common URL forms found in email.</p>
+<pre class="code-snippet"><code><span class="comment"># Updated regex to cover protocol-less URLs</span>
 url_pattern = re.<span class="function">compile</span>(
     <span class="string">r"(https?://\S+|www\.\S+|\b(?:\w+\.)+[a-zA-Z]{2,}\b(?:/\S*)?)"</span>
 )
@@ -325,31 +325,31 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
 
     <section class="wrapper style1">
         <div class="inner align-center">
-            <h2>Pruebas de Inferencia en Tiempo Real</h2>
+            <h2>Real-Time Inference Testing</h2>
             <p>
-                Interfaz desarrollada en CustomTkinter para la evaluación del modelo con nuevos datos. Las métricas de backend muestran la extracción de vectores y preprocesamiento en vivo.
+                A CustomTkinter interface for evaluating the model on new inputs. The backend output shows live feature vector extraction and preprocessing steps.
             </p>
 
             <div class="gui-gallery">
                 <div class="gui-item">
-                    <img src="images/projects/noramlespa.png" alt="Detección de Texto Seguro">
-                    <div class="gui-caption"><strong>Clase 0: Seguro</strong><br>Comunicación corporativa legítima</div>
+                    <img src="images/projects/noramlespa.png" alt="Safe text detection">
+                    <div class="gui-caption"><strong>Class 0: Safe</strong><br>Legitimate corporate communication</div>
                 </div>
 
                 <div class="gui-item">
-                    <img src="images/projects/pishespa.png" alt="Detección de Phishing">
-                    <div class="gui-caption"><strong>Clase 1: Phishing</strong><br>Detección de urgencia e ingeniería social</div>
+                    <img src="images/projects/pishespa.png" alt="Phishing detection">
+                    <div class="gui-caption"><strong>Class 1: Phishing</strong><br>Urgency cues and social engineering</div>
                 </div>
 
                 <div class="gui-item">
-                    <img src="images/projects/sinjespa.png" alt="Detección SQLi">
-                    <div class="gui-caption"><strong>Clase 2: Inyección SQL</strong><br>Identificación de sintaxis ofuscada en texto</div>
+                    <img src="images/projects/sinjespa.png" alt="SQL injection detection">
+                    <div class="gui-caption"><strong>Class 2: SQL Injection</strong><br>Obfuscated attack syntax inside natural text</div>
                 </div>
             </div>
             
             <div style="margin-top: 2rem;">
-                <img src="images/projects/muestras.png" alt="Extracción de backend" style="width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
-                <p style="font-size: 0.9rem; color: #ccc; margin-top: 0.5rem;">Preprocesamiento de texto y extracción de vectores de 14 características en backend.</p>
+                <img src="images/projects/muestras.png" alt="Backend feature extraction" style="width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 0.9rem; color: #ccc; margin-top: 0.5rem;">Text preprocessing and 14-feature vector extraction running in the backend.</p>
             </div>
             <hr />
         </div>
@@ -358,7 +358,7 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center">
-                <h2>Dashboard de Desempeño y Explicabilidad</h2>
+                <h2>Performance Dashboard</h2>
             </div>
 
             <div class="dashboard-img-container">
@@ -376,23 +376,23 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
             <div class="row">
                 <div class="col-6 col-12-medium">
                     <div class="insight-card" style="border-left-color: #09281d">
-                        <h3>Análisis de Falsos Positivos</h3>
+                        <h3>A Note on False Positives</h3>
                         <p>
-                            Durante la inferencia, se observó que el modelo desarrolló sensibilidad hacia vocabulario como "urgente" o "password". Un ataque de Inyección SQL camuflado dentro de un texto con lenguaje de ingeniería social puede clasificarse incorrectamente como Phishing, ya que el peso acumulado de las palabras de alerta en la capa de atención supera el valor del token SQLi en el MaxPooling. Este comportamiento revela cómo interactúan ambas ramas del modelo en casos límite.
+                            During inference testing, I noticed the model had developed sensitivity to words like "urgent" or "password". A SQL injection payload embedded inside a message with heavy social engineering language could get misclassified as phishing, because the accumulated weight of alarm-word tokens in the attention layer outweighed the SQL token's MaxPooling activation. It's an interesting edge case that shows how the two branches interact — and a good argument for keeping the confusion matrix visible rather than just reporting the headline accuracy.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-6 col-12-medium">
-                    <h2>Conclusiones del Proyecto</h2>
+                    <h2>What I took away from this</h2>
                     <p>
-                        El desarrollo del sistema mostró que una arquitectura de doble entrada es viable para clasificación multiclase en ciberseguridad:
+                        A few things that stuck with me from building this:
                     </p>
                     <ul>
-                        <li>El uso de callbacks evitó el sobreajuste en épocas avanzadas sin necesidad de intervención manual.</li>
-                        <li>Una arquitectura entrenada desde cero resultó más adecuada que Transfer Learning para detectar sintaxis específica como comandos SQL y patrones de URL. Modelos como RoBERTa o XLM-RoBERTa, aunque más potentes en tareas de lenguaje natural general, no están diseñados para preservar la semántica de caracteres especiales que son centrales en la detección de inyecciones SQL.</li>
-                        <li>La generación de datos sintéticos demostró ser una alternativa viable para corregir sesgos de recolección cuando no se dispone de datasets balanceados en el idioma requerido.</li>
-                        <li><strong>Trabajo futuro:</strong> Como trabajo futuro, podría plantearse la incorporación de un corpus de phishing en español de fuente real, la evaluación del modelo contra técnicas de evasión adversarial, y la exploración de arquitecturas multilingües que equilibren la comprensión de lenguaje natural con la detección de sintaxis específica de ataque.</li>
+                        <li>Callbacks handled overfitting cleanly without manual intervention once they were configured correctly — EarlyStopping and ReduceLROnPlateau did most of the work.</li>
+                        <li>Training from scratch was the right call here. Transfer learning models like RoBERTa or XLM-RoBERTa are strong for natural language tasks, but they're not designed to preserve the semantics of characters like <code>'</code>, <code>--</code>, or <code>=</code>, which are exactly what SQL injection detection depends on.</li>
+                        <li>Synthetic data augmentation worked as a targeted fix for the Spanish-language bias, but it's a patch, not a solution. The right long-term fix is a real Spanish phishing corpus.</li>
+                        <li><strong>What's next:</strong> Testing against adversarial evasion techniques, sourcing real Spanish-language phishing data, and exploring multilingual architectures that can balance natural language understanding with attack syntax detection.</li>
                     </ul>
                 </div>
             </div>
@@ -400,7 +400,7 @@ urls_found = url_pattern.<span class="function">findall</span>(text)</code></pre
             <ul class="actions stacked" style="margin-top: 4rem; text-align: center;">
                 <li>
                     <a href="https://github.com/LuisMoto/neural-threat-analyzer" target="_blank" class="button primary big">
-                        Ver Código Fuente en GitHub
+                        View Source Code on GitHub
                     </a>
                 </li>
             </ul>
