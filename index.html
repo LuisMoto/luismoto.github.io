@@ -3,628 +3,139 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    
-    <title>Luis Armando Macías Moto | Data Scientist & Linguist</title>
-
-    <meta name="description" content="Portafolio profesional de Luis Armando Macías Moto. Lingüista de la UAM y Científico de Datos. Especialista en Análisis de Datos, NLP y soluciones de IA.">
-    <meta name="keywords" content="Luis Armando Macías Moto, UAM, Lingüística, Data Scientist, Data Analyst, Analista de Datos, Científico de Datos, NLP, Procesamiento de Lenguaje Natural, Python, Machine Learning, Computational Linguistics, Análisis de Datos México">
-    <meta name="author" content="Luis Armando Macías Moto">
-    <meta name="robots" content="index, follow">
+    <title>Luis Moto | Mathematics, Language & Technology</title>
+    <meta name="description" content="Applied Mathematics student and linguist. My work spans scientific computing, business environments, and the study of complex systems. Currently at IBM and UNAM.">
+    <meta name="keywords" content="Luis Moto, Applied Mathematics, Linguistics, UNAM, IBM, Scientific Computing, Research, Technology, Business Strategy">
     <link rel="canonical" href="https://luismoto.github.io/">
-
-    <meta name="language" content="es">
-    <meta http-equiv="content-language" content="es-MX, en-US">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://luismoto.github.io/">
-    <meta property="og:title" content="Luis Armando Macías Moto | Data Scientist & Linguist">
-    <meta property="og:description" content="Lingüista de la UAM especializado en Ciencia de Datos y Análisis Predictivo. Explora mis proyectos de IA y NLP.">
-    <meta property="og:image" content="https://luismoto.github.io/images/gallery/fulls/03.jpg">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:locale:alternate" content="en_US">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://luismoto.github.io/">
-    <meta name="twitter:title" content="Luis Armando Macías Moto | Data Scientist & Linguist">
-    <meta name="twitter:description" content="Científico de Datos y Lingüista (UAM). Proyectos avanzados de análisis y modelos de lenguaje.">
-    <meta name="twitter:image" content="https://luismoto.github.io/images/gallery/fulls/03.jpg">
-
-    <meta name="theme-color" content="#09281d">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
     <link rel="stylesheet" href="assets/css/main.css" /> 
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    
     <style>
-        
-        .philosophy-quote {
-            border-left: 4px solid #ffffff;
-            padding: 1.5rem 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            font-style: italic;
-            font-size: 1.05rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-            color: #fff;
-        }
-
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            text-align: left;
-        }
-
-        .exp-card {
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(255, 255, 255, 0.03);
-            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            backdrop-filter: blur(6px);
-            overflow: hidden;
-        }
-
-        .exp-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(255, 255, 255, 0.22);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-        }
-
-    
+        .philosophy-quote { border-left: 4px solid #ffffff; padding: 1.5rem 2rem; background: rgba(255, 255, 255, 0.05); font-style: italic; font-size: 1.05rem; margin: 2rem 0; border-radius: 0 8px 8px 0; color: #fff; }
+        .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: left; }
+        .exp-card { padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.06); background: rgba(255, 255, 255, 0.03); transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column; height: 100%; backdrop-filter: blur(6px); overflow: hidden; }
+        .exp-card:hover { transform: translateY(-6px); border-color: rgba(255, 255, 255, 0.22); box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
         .exp-card.color-1 { border-left: 5px solid #594a65; }
         .exp-card.color-2 { border-left: 5px solid #4c6d74; }
-        .exp-card.color-3 { border-left: 5px solid #686b59; }
-        .exp-card.color-4 { border-left: 5px solid #406689; }
-
-        .exp-card-image {
-            width: calc(100% + 5rem);
-            margin: 0 -2.5rem 1.5rem -2.5rem;
-            height: 160px;
-            overflow: hidden;
-        }
-
-        .exp-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .exp-card:hover .exp-card-image img {
-            opacity: 0.9;
-        }
-
-        .exp-header {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 1.5rem;
-        }
-
-        .exp-header h3 {
-            margin-bottom: 0.3rem;
-            color: #fff;
-            font-size: 1.3rem;
-        }
-
-        .exp-header .company {
-            color: #d8d8d8;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-        }
-
-        .exp-header .date {
-            color: rgba(255, 255, 255, 0.55);
-            font-size: 0.8rem;
-            display: block;
-            margin-top: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        .exp-card ul {
-            padding-left: 1.2rem;
-            margin-bottom: 0;
-            flex-grow: 1;
-        }
-
-        .exp-card ul li {
-            font-size: 0.9rem;
-            margin-bottom: 0.8rem;
-            color: #e1e1e1;
-        }
-
-    
-        .additional-exp-container {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 3rem;
-            text-align: left;
-        }
-
-        .additional-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .additional-list li {
-            margin-bottom: 1.2em;
-            line-height: 1.5;
-            font-size: 0.95rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 1.2em;
-        }
-
-        .additional-list li:last-child {
-            border-bottom: none;
-        }
-
-        .additional-list .year-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.1);
-            padding: 0.1rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 0 0.5rem;
-        }
-
-        .fab-cv {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #000000;
-            color: #ffffff !important;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            z-index: 9999;
-            transition: all 0.3s ease;
-            border: 2px solid #442c58;
-            text-decoration: none !important;
-        }
-
-        .fab-cv:hover {
-            transform: translateY(-5px);
-            border-color: #9d4edd;
-        }
-
-        .fab-cv::after {
-            content: "Download CV";
-            position: absolute;
-            right: 75px;
-            background: #000000;
-            color: white;
-            padding: 6px 15px;
-            border-radius: 4px;
-            font-size: 13px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            border: 1px solid #442c58;
-            white-space: nowrap;
-            pointer-events: none;
-        }
-
-        .fab-cv:hover::after { opacity: 1; }
+        .exp-card.color-3 { border-left: 5px solid #406689; }
+        .exp-header { margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 1.5rem; }
+        .exp-header h3 { margin-bottom: 0.3rem; color: #fff; font-size: 1.3rem; }
+        .exp-header .company { color: #d8d8d8; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; display: block; }
+        .exp-header .date { color: rgba(255, 255, 255, 0.55); font-size: 0.8rem; display: block; margin-top: 0.5rem; letter-spacing: 1px; }
+        .exp-card ul { padding-left: 1.2rem; margin-bottom: 0; flex-grow: 1; }
+        .exp-card ul li { font-size: 0.9rem; margin-bottom: 0.8rem; color: #e1e1e1; }
+        .additional-exp-container { background: rgba(255, 255, 255, 0.02); border-radius: 12px; padding: 3rem; border: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem; text-align: left; }
+        .additional-list { list-style: none; padding-left: 0; margin: 0; }
+        .additional-list li { margin-bottom: 1.2em; line-height: 1.5; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1.2em; }
+        .year-badge { display: inline-block; background: rgba(255,255,255,0.1); padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin: 0 0.5rem; }
+        .fab-cv { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #000000; color: #ffffff !important; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 9999; border: 2px solid #442c58; text-decoration: none !important; }
     </style>
 </head>
 <body class="is-preload">
-
     <div id="wrapper" class="divided">
-
-        <!-- Banner -->
-        <section class="banner style2 orientation-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="home">
+        <section class="banner style2 orientation-left content-align-left image-position-right fullscreen" id="home">
             <div class="content">
                 <h1>Luis Moto</h1>
                 <p class="major">
-                    Linguist and Applied Mathematics student. I work with data to find patterns, build models, and communicate results clearly.
+                    Applied Mathematics student and linguist interested in quantitative reasoning, research, and technology.<br>
+                    Currently a Global Sales Intern at IBM and Research Intern at UNAM.
                 </p>
                 <ul class="actions stacked">
-                    <li><a href="#about-me" class="button big wide smooth-scroll-middle">Get Started</a></li>
+                    <li><a href="#about-me" class="button big wide smooth-scroll-middle">Read my story</a></li>
                 </ul>
             </div>
-            <div class="image">
-                <img src="images/banner.jpg" alt="Luis Moto" />
-            </div>
+            <div class="image"><img src="images/banner.jpg" alt="Luis Moto" /></div>
         </section>
 
-        <!-- About Me -->
-        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="about-me">
+        <section class="spotlight style1 orient-right content-align-left image-position-center" id="about-me">
             <div class="content">
-                <h2>About Me</h2>
-                <p>I've always been interested in how information is structured — whether through the rules of a language or the logic of an equation. My background reflects that: I hold a <strong>B.A. in Linguistics (UAM)</strong> and I am currently pursuing a <strong>B.Sc. in Applied Mathematics at UNAM</strong>.</p>
-                
-                <p>I work in <strong>Business Intelligence and Data Analysis</strong>, mostly with <strong>Python, SQL, and Power BI</strong>. In recent projects I've also used <strong>Machine Learning</strong> for pattern detection and anomaly analysis.</p>
-                
-                <div class="philosophy-quote">
-                    A good analysis doesn't end with the code or the dashboard. It ends when someone else can understand it, question it, and use it.
-                </div>
-
-                <div style="margin-top: 2.5rem;">
-                    <h3 style="font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">Beyond the Data</h3>
-                    <p style="font-size: 0.9rem; color: #bbb; line-height: 1.6;"><strong>Music & Books:</strong> I play bass and piano, mostly with friends. Outside of that I read a lot — I'm drawn to Latin American authors like Borges and Cortázar.</p>
-                </div>
-                
+                <h2>A different lens</h2>
+                <p>I am interested in how information is structured — whether through the rules of a language or the logic of an equation. My background bridges two worlds: a <strong>B.A. in Linguistics (UAM)</strong> and a <strong>B.Sc. in Applied Mathematics (UNAM)</strong>.</p>
+                <p>I don't fit into a single box. My work spans scientific computing, commercial environments, and the study of complex systems.</p>
+                <div class="philosophy-quote">"I want to understand the patterns that govern how we interact with the world—be it through data, language, or logic."</div>
                 <ul class="actions stacked" style="margin-top: 2rem;">
                     <li><a href="#experience" class="button smooth-scroll-middle">See Experience</a></li>
                 </ul>
             </div>
-            <div class="image">
-                <img src="images/spotlight01.jpg" alt="Luis Moto - Linguistics and Applied Mathematics" />
-            </div>
+            <div class="image"><img src="images/spotlight01.jpg" alt="Luis Moto" /></div>
         </section>
 
-        <!-- Education -->
-        <section class="wrapper style1 align-center" id="education">
-            <div class="inner">
-                <h2>Education</h2>
-                <p>A dual background in Applied Mathematics and Linguistics.</p>
-                
-                <div class="row" style="margin-top: 3rem; text-align: left;">
-                    
-                    <div class="col-6 col-12-medium">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #3c3748; overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="width: 100%; height: 200px; overflow: hidden;">
-                                <img src="images/gallery/fulls/08.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Mathematics Background">
-                            </div>
-                            <div style="padding: 2.5rem;">
-                                <h3>B.S. in Applied Mathematics</h3>
-                                <h4 style="color: #ffffff;">National Autonomous University of Mexico (UNAM)</h4>
-                                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);"><em>2023 — Present</em></p>
-                                <p style="font-size: 0.95rem;">Focus on modeling real-world problems through mathematical and computational tools.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-12-medium">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border-left: 4px solid #676054; overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="width: 100%; height: 200px; overflow: hidden;">
-                                <img src="images/gallery/fulls/12.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Linguistics Background">
-                            </div>
-                            <div style="padding: 2.5rem;">
-                                <h3>B.A. in Linguistics</h3>
-                                <h4 style="color: #ffffff;">Autonomous Metropolitan University (UAM)</h4>
-                                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);"><em>Graduate</em></p>
-                                <p style="font-size: 0.95rem;">Formal analysis of language as a structured system, covering syntax, semantics, and NLP tasks.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Certificaciones Recuperada -->
-        <section class="wrapper style1 align-center" id="certifications">
-            <div class="inner">
-                <h2>Certifications & Continuous Learning</h2>
-                <p>Specialized programs focused on methodology, research, and advanced analytical tools.</p>
-                
-                <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: left;">
-                    
-                    <!-- Tarjeta 1: IBM Data Science -->
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">IBM Data Science</h3>
-                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Professional Certificate</p>
-                                <p style="font-size: 0.88rem;">Mastery of the full data science lifecycle: from methodology and SQL/Python tools to data visualization and predictive project development.</p>
-                            </div>
-                            <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/04.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Data Science">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 2: Neurolinguistics -->
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Neurolinguistics</h3>
-                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Saint Petersburg University</p>
-                                <p style="font-size: 0.88rem;">Analysis of neurobiological language mechanisms, focusing on neurophysiological acquisition and speech processing research methods.</p>
-                            </div>
-                            <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/12.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Neurolinguistics">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 3: Scientific Writing -->
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Scientific Writing</h3>
-                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">Faculty of Sciences, UNAM</p>
-                                <p style="font-size: 0.88rem;">Development of logical rigor and structural clarity in technical communication for documenting complex scientific research.</p>
-                            </div>
-                            <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/05.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Scientific Writing">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 4: Mathematics Master -->
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <h3 style="margin-bottom: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block;">Mathematics Master</h3>
-                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem;">CONAMAT Diploma</p>
-                                <p style="font-size: 0.88rem;">Intensive training in advanced algebraic structures, calculus, and analytic geometry for complex problem-solving.</p>
-                            </div>
-                            <div style="width: 100%; height: 120px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/08.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Mathematics">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
         <section class="wrapper style1 align-center" id="experience">
             <div class="inner">
                 <h2>Professional Experience</h2>
-                <p>Work across data analysis, software development, and research.</p>
-
                 <div class="experience-grid">
-                    
-                    <!-- VR Lab -->
                     <div class="exp-card color-1">
                         <div class="exp-header">
-                            <h3>Research & VR Development Intern</h3>
+                            <h3>Global Sales Intern</h3>
+                            <span class="company">IBM</span>
+                            <span class="date">Jul. 2026 – Present</span>
+                        </div>
+                        <ul>
+                            <li>Strategic alignment of technical solutions with business requirements.</li>
+                            <li>Analysis of regional market trends to drive decision-making.</li>
+                            <li>Optimization of internal sales reporting processes.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-card color-2">
+                        <div class="exp-header">
+                            <h3>Research & Simulation Intern</h3>
                             <span class="company">Advanced Optics Laboratory (UNAM)</span>
                             <span class="date">Mar. 2026 – Present</span>
                         </div>
-                        <div class="exp-card-image">
-                            <img src="images/gallery/thumbs/08.jpg" alt="VR Development">
-                        </div>
-                        <p>Working on a VR optics simulator that replicates classical and quantum experiments in an interactive environment.</p>
                         <ul>
-                            <li>Built a hybrid architecture (Unity/Python).</li>
-                            <li>Implemented Monte Carlo simulations.</li>
+                            <li>Developing VR-based optics simulators replicating classical experiments.</li>
+                            <li>Implementing numerical models and Monte Carlo simulations.</li>
                         </ul>
                     </div>
-
-                    <!-- Outlier -->
-                    <div class="exp-card color-2">
-                        <div class="exp-header">
-                            <h3>AI Trainer – Language Models</h3>
-                            <span class="company">Outlier.org (Remote)</span>
-                            <span class="date">Mar. 2023 – Feb. 2025</span>
-                        </div>
-                        <div class="exp-card-image">
-                            <img src="images/gallery/thumbs/01.jpg" alt="AI Trainer">
-                        </div>
-                        <p>Contributed to the training and evaluation of large language models.</p>
-                        <ul>
-                            <li>Designed prompts for mathematical and linguistic tasks.</li>
-                            <li>Evaluated model outputs for logical consistency.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Hospital -->
                     <div class="exp-card color-3">
                         <div class="exp-header">
-                            <h3>Clinical Research Intern</h3>
-                            <span class="company">Hospital Manuel Gea González</span>
-                            <span class="date">Jun. 2023 – Jan. 2024</span>
-                        </div>
-                        <div class="exp-card-image">
-                            <img src="images/gallery/thumbs/10.jpg" alt="Clinical Research">
-                        </div>
-                        <p>Supported clinical research through data management and analysis.</p>
-                        <ul>
-                            <li>Maintained research databases under ethical standards.</li>
-                            <li>Ran statistical analyses to inform decisions.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Zensitud -->
-                    <div class="exp-card color-4">
-                        <div class="exp-header">
                             <h3>Data Analyst</h3>
-                            <span class="company">Zensitud – Online Psychology Platform</span>
+                            <span class="company">Zensitud</span>
                             <span class="date">Jan. 2021 – Apr. 2022</span>
                         </div>
-                        <div class="exp-card-image">
-                            <img src="images/gallery/thumbs/09.jpg" alt="Data Analytics">
-                        </div>
-                        <p>Analyzed user behavior to support business decisions.</p>
                         <ul>
-                            <li>Worked with data from 2,000+ users using Python and SQL.</li>
-                            <li>Built Power BI dashboards; 10% increase in revenue.</li>
+                            <li>Processed transactional datasets to inform operational strategy.</li>
+                            <li>Built BI dashboards to monitor KPIs and user behavior.</li>
                         </ul>
                     </div>
-
                 </div>
 
-                <!-- Additional Exp -->
                 <div class="additional-exp-container">
                     <h3 style="color: #fff; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">Additional Experience</h3>
                     <ul class="additional-list">
-                        <li><strong>Chess Coach (Adult Training)</strong> <span class="year-badge">2025 – Present</span> <br>Structured sessions focused on pattern recognition, strategic thinking, and decision-making under time pressure.</li>
-                        <li><strong>Freelance Academic Editor</strong> <span class="year-badge">2020 – 2023</span> <br>Edited research papers in English and Spanish, focusing on clarity, structure, and logical flow.</li>
-                        <li><strong>Chess Teaching Assistant (UNAM)</strong> <span class="year-badge">2019 – 2020</span> <br>Worked with competitive teams, breaking down complex positions into structured decision-making processes.</li>
-                        <li><strong>Contact Center Agent (Telvista)</strong> <span class="year-badge">2016 – 2017</span> <br>Handled bilingual cases for Aeroméxico, resolving complex issues in real time.</li>
+                        <li><strong>Clinical Research Intern</strong> <span class="year-badge">2023 – 2024</span> <br>Hospital Manuel Gea González. Supported institutional research projects through statistical analysis and database management.</li>
+                        <li><strong>Chess Coach (Adult Training)</strong> <span class="year-badge">2025 – Present</span> <br>Structured sessions focused on pattern recognition and decision-making under time pressure.</li>
+                        <li><strong>Freelance Academic Editor</strong> <span class="year-badge">2020 – 2023</span> <br>Edited research papers focusing on clarity, structure, and logical flow.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
-
-        <!-- Projects -->
         <section class="wrapper style1 align-center" id="projects">
             <div class="inner">
                 <h2>Featured Projects</h2>
                 <div class="gallery style2 medium lightbox onscroll-fade-in">
                     <article>
-                        <a href="project-superstore.html" class="image">
-                            <img src="images/gallery/thumbs/01.jpg" alt="Superstore Analytics" />
-                        </a>
-                        <div class="caption">
-                            <h3>Superstore BI & Analytics</h3>
-                            <p>End-to-end data pipeline using Python and Power BI.</p>
-                            <ul class="actions fixed">
-                                <li><a href="project-superstore.html" class="button small">View Details</a></li>
-                            </ul>
-                        </div>
+                        <a href="project-superstore.html" class="image"><img src="images/gallery/thumbs/01.jpg" alt="Superstore" /></a>
+                        <div class="caption"><h3>Superstore BI</h3><p>Data pipeline and BI dashboard.</p></div>
                     </article>
                     <article>
-                        <a href="project-chess.html" class="image">
-                            <img src="images/gallery/thumbs/02.jpg" alt="Chess Suite" />
-                        </a>
-                        <div class="caption">
-                            <h3>Modular Chess Training Suite</h3>
-                            <p>Python application with MVC architecture and engine integration.</p>
-                            <ul class="actions fixed">
-                                <li><a href="project-chess.html" class="button small">View Details</a></li>
-                            </ul>
-                        </div>
+                        <a href="project-chess.html" class="image"><img src="images/gallery/thumbs/02.jpg" alt="Chess" /></a>
+                        <div class="caption"><h3>Chess Suite</h3><p>Modular Python engine.</p></div>
                     </article>
                     <article>
-                        <a href="project_cybersecurity.html" class="image">
-                            <img src="images/gallery/thumbs/03.jpg" alt="Neural Threat Analyzer" />
-                        </a>
-                        <div class="caption">
-                            <h3>Neural Threat Analyzer</h3>
-                            <p>Hybrid AI engine designed to detect modern Phishing and SQL Injection attacks.</p>
-                            <ul class="actions fixed">
-                                <li><a href="project_cybersecurity.html" class="button small">View Project</a></li>
-                            </ul>
-                        </div>
+                        <a href="project_cybersecurity.html" class="image"><img src="images/gallery/thumbs/03.jpg" alt="Cyber" /></a>
+                        <div class="caption"><h3>Threat Analyzer</h3><p>AI-driven threat detection.</p></div>
                     </article>
                 </div>
             </div>
         </section>
 
-    
-        <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
-
-        <!-- Technical Skills -->
-        <section class="wrapper style1 align-center" id="technical-skills">
-            <div class="inner">
-                <h2>Technical Skills</h2>
-                <div class="row onscroll-fade-in" style="margin-top: 3rem; text-align: center;">
-                    
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <span class="icon solid style2 major fa-chart-line" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
-                                <h3 style="margin-bottom: 1rem;">Data Analysis & BI</h3>
-                                <p style="font-size: 0.9rem; text-align: left;">
-                                    <strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib), SQL, Power BI.<br><br>
-                                    <strong>What I do:</strong> Analyze user behavior to identify growth opportunities through actionable dashboards.
-                                </p>
-                            </div>
-                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/04.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Data Analysis">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <span class="icon solid style2 major fa-brain" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
-                                <h3 style="margin-bottom: 1rem;">Machine Learning & AI</h3>
-                                <p style="font-size: 0.9rem; text-align: left;">
-                                    <strong>Tools:</strong> Scikit-learn, Prompt Engineering, LLM Evaluation.<br><br>
-                                    <strong>What I do:</strong> Build models for anomaly detection and improve reliability in AI-generated outputs.
-                                </p>
-                            </div>
-                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/09.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Machine Learning">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <span class="icon solid style2 major fa-cube" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
-                                <h3 style="margin-bottom: 1rem;">Scientific Computing</h3>
-                                <p style="font-size: 0.9rem; text-align: left;">
-                                    <strong>Tools:</strong> Python, Unity (C#), JSON pipelines.<br><br>
-                                    <strong>What I do:</strong> Design hybrid systems that combine real-time simulation with numerical computation.
-                                </p>
-                            </div>
-                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/05.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Scientific Computing">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-3 col-6-medium col-12-small" style="margin-bottom: 2rem;">
-                        <div style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; display: flex; flex-direction: column;">
-                            <div style="padding: 2rem; flex-grow: 1;">
-                                <span class="icon solid style2 major fa-square-root-alt" style="font-size: 2.5rem; margin-bottom: 1.5rem; display: block; color: #fff;"></span>
-                                <h3 style="margin-bottom: 1rem;">Applied Mathematics</h3>
-                                <p style="font-size: 0.9rem; text-align: left;">
-                                    <strong>Focus:</strong> Probability, statistical modeling, and calculus.<br><br>
-                                    <strong>What I do:</strong> Apply mathematical modeling to analyze uncertainty and simulate complex systems.
-                                </p>
-                            </div>
-                            <div style="width: 100%; height: 160px; overflow: hidden; margin-top: auto;">
-                                <img src="images/gallery/fulls/01.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;" alt="Applied Mathematics">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <ul class="actions stacked" style="margin-top: 4rem; padding-bottom: 2rem;">
-                    <li><a href="#" class="button smooth-scroll">Back to Top</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Línea divisoria antes del Footer -->
-        <hr style="border-bottom: solid 1px rgba(255, 255, 255, 0.1); margin: 0;" />
-
-        <!-- Footer -->
         <footer class="wrapper style1 align-center">
             <div class="inner">
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
                 <p>&copy; Luis Moto 2026.</p>
             </div>
         </footer>
-
     </div>
-
-    <!-- CV Button -->
-    <a href="assets/pdf/luis_moto_cv.pdf" class="fab-cv" target="_blank">
-        <i class="icon solid fa-download"></i>
-    </a>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <a href="assets/pdf/luis_moto_cv.pdf" class="fab-cv" target="_blank"><i class="icon solid fa-download"></i></a>
 </body>
 </html>
