@@ -6,7 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="icon" type="image/png" href="images/favicon.png?v=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+
+    <meta name="description" content="A modular, object-oriented desktop application for chess study: Stockfish-powered checkmate training, Elo rating analytics, and a flashcard system for pattern recognition.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://luismoto.github.io/project-chess.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://luismoto.github.io/project-chess.html">
+    <meta property="og:title" content="Modular Chess Training Suite - Luis Moto">
+    <meta property="og:description" content="A modular, object-oriented desktop application for chess study: Stockfish-powered checkmate training, Elo rating analytics, and a flashcard system.">
+    <meta property="og:image" content="https://luismoto.github.io/images/projects/chess_calc.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modular Chess Training Suite - Luis Moto">
+    <meta name="twitter:description" content="A modular, object-oriented desktop application for chess study: Stockfish-powered checkmate training, Elo rating analytics, and a flashcard system.">
+    <meta name="twitter:image" content="https://luismoto.github.io/images/projects/chess_calc.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Modular Chess Training Suite",
+      "description": "A modular, object-oriented desktop application for chess study, integrating the Stockfish engine for checkmate training, an Elo rating analytics module, and a JSON-backed flashcard system.",
+      "codeRepository": "https://github.com/LuisMoto/chess-training-suite",
+      "programmingLanguage": "Python",
+      "author": {
+        "@type": "Person",
+        "name": "Luis Moto",
+        "url": "https://luismoto.github.io/"
+      }
+    }
+    </script>
 
     <style>
         .project-header {
@@ -14,7 +49,7 @@
             text-align: center;
             position: relative;
             background-color: #0b0c10;
-            background-image: url('images/gallery/fulls/02.jpg');
+            background-image: url('images/gallery/fulls/02.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -128,6 +163,25 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="align-center">
+                <h2>Why I Built This</h2>
+            </div>
+            <div class="feature-item" style="max-width: 800px; margin: 2rem auto 0 auto; border-top: 4px solid #c5a059;">
+                <p>
+                    This started as an assignment for <em>Ajedrez por Computadora</em> (Computer Chess) at Facultad de Ciencias, UNAM — the brief was simple: build a program that could display positions and information cards.
+                </p>
+                <p>
+                    I play chess and coach it, so I saw a use for it beyond the assignment. While working with my own students, I extended it into a fuller suite — the part I'm most glad exists generates random, legal positions of basic checkmate patterns, so students can drill mate patterns and board vision on their own.
+                </p>
+                <p style="margin-bottom: 0;">
+                    It was the first time I built something meant for real use, rather than as an exercise or a final project.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="align-center">
                 <h2>Technical Architecture</h2>
                 <p>
                     Unlike monolithic applications, this suite was designed using an
@@ -197,7 +251,7 @@
             <div class="row">
                 <div class="col-6 col-12-medium">
                     <div class="img-showcase">
-                        <img src="images/projects/chess_calc.png" alt="Elo Calculator Interface" />
+                        <img src="images/projects/chess_calc.webp" alt="Elo Calculator Interface" />
                     </div>
                 </div>
 
@@ -224,7 +278,7 @@
             </p>
 
             <div class="img-showcase" style="max-width: 800px; margin: 2rem auto 0 auto;">
-                <img src="images/projects/chess_flash.png" alt="Chess Flashcard Interface" />
+                <img src="images/projects/chess_flash.webp" alt="Chess Flashcard Interface" />
             </div>
         </div>
     </section>
@@ -232,10 +286,10 @@
     <section class="wrapper style1">
         <div class="inner">
             <div class="cta-container">
-                <h2>Executive & Technical Case Study</h2>
+                <h2>Technical Case Study</h2>
                 <p style="color: #ccc;">
-                    A technical report exploring the architecture, engine integration,
-                    and mathematical modeling behind the platform.
+                    A closer look at the architecture, engine integration,
+                    and the math behind the suite.
                 </p>
 
                 <ul class="actions" style="justify-content: center; display: flex; gap: 1rem;">
@@ -264,9 +318,9 @@
     <footer class="wrapper style1 align-center">
         <div class="inner">
             <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in" aria-label="Luis Moto's LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github" aria-label="Luis Moto's GitHub profile"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope" aria-label="Email Luis Moto"><span class="label">Email</span></a></li>
             </ul>
             <p>&copy; Luis Moto 2026.</p>
         </div>

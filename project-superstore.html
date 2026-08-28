@@ -7,15 +7,50 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <link rel="icon" type="image/png" href="images/favicon.png?v=1">
-    
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+
+    <meta name="description" content="Profitability analysis of retail transaction data: identifying a structural pricing threshold and simulating a targeted discount adjustment, built with Python, Pandas, and Power BI.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://luismoto.github.io/project-superstore.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://luismoto.github.io/project-superstore.html">
+    <meta property="og:title" content="Retail Profitability Analysis - Luis Moto">
+    <meta property="og:description" content="Profitability analysis of retail transaction data: identifying a structural pricing threshold and simulating a targeted discount adjustment.">
+    <meta property="og:image" content="https://luismoto.github.io/images/projects/super_dash.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Retail Profitability Analysis - Luis Moto">
+    <meta name="twitter:description" content="Profitability analysis of retail transaction data: identifying a structural pricing threshold and simulating a targeted discount adjustment.">
+    <meta name="twitter:image" content="https://luismoto.github.io/images/projects/super_dash.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Retail Profitability Analysis",
+      "description": "Profitability analysis of approximately 10,000 retail transactions, identifying a structural pricing threshold and simulating a targeted discount reduction, with results operationalized in an interactive Power BI dashboard.",
+      "codeRepository": "https://github.com/LuisMoto/bi_project_supersotre",
+      "programmingLanguage": ["Python", "DAX"],
+      "author": {
+        "@type": "Person",
+        "name": "Luis Moto",
+        "url": "https://luismoto.github.io/"
+      }
+    }
+    </script>
+
     <style>
         .project-header {
             padding: 10rem 0;
             text-align: center;
             position: relative;
             background-color: #050a15;
-            background-image: url('images/gallery/fulls/01.jpg'); 
+            background-image: url('images/gallery/fulls/01.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -185,7 +220,7 @@
         <div class="inner">
             <a href="index.html#projects" class="button small">← Back to Portfolio</a>
             <h1 style="margin-top: 2rem;">Retail Profitability Analysis</h1>
-            <p class="major">Strategic Pricing Intervention & What-If Simulation</p>
+            <p class="major">A Profitability Analysis of ~10,000 Retail Transactions</p>
             <div class="tags">
                 <span class="tech-tag">PYTHON</span>
                 <span class="tech-tag">PANDAS</span>
@@ -198,39 +233,39 @@
     <section class="wrapper style1">
         <div class="inner">
 
-            <h2>1. Executive Summary</h2>
+            <h2>1. What I Found</h2>
             <p>
-                A profitability analysis of approximately 10,000 retail transactions identified a <span style="color:#ff4444; font-weight:bold;">critical financial issue</span> within the Central region. The <strong>Texas</strong> market is operating at a sustained <strong>-$33,955 net loss</strong> despite strong sales volume.
+                I analyzed roughly 10,000 retail transactions and found a <span style="color:#ff4444; font-weight:bold;">real problem</span> in the Central region: the <strong>Texas</strong> market was running at a sustained <strong>-$33,955 net loss</strong> despite strong sales volume.
             </p>
             <p>
-                Implementing a <strong>targeted 5% discount reduction on high-discount transactions</strong> in Texas recovers <strong>$9,051.80</strong> in net profit, improving the segment's performance by <strong>26%</strong> without affecting overall operations.
+                A <strong>targeted 5% discount reduction on high-discount transactions</strong> in Texas recovers <strong>$9,051.80</strong> in net profit — a <strong>26%</strong> improvement for the segment, without touching the rest of the business.
             </p>
 
             <hr class="section-divider" />
 
             <h2>2. Root Cause: Pricing Threshold</h2>
             <p>
-                Initial analysis shows that standard discount levels generate a healthy <strong>+26.69%</strong> profit margin. However, performance deteriorates as discounts increase.
+                Standard discount levels generate a healthy <strong>+26.69%</strong> profit margin, but performance drops fast once discounts climb higher.
             </p>
             <p>
                 <strong>Profitability turns negative when discounts exceed the 20–30% range, revealing a structural pricing threshold.</strong>
             </p>
             <p>
-                This threshold explains why Texas operates at a loss, as discount levels in this region frequently fall within this range.
+                This threshold explains the Texas loss — discount levels there frequently fall in that range.
             </p>
 
             <div class="viz-container">
-                <img src="images/projects/super_profit.png" alt="Discount vs Profitability Analysis">
+                <img src="images/projects/super_profit.webp" alt="Discount vs Profitability Analysis">
             </div>
 
             <hr class="section-divider" />
 
             <h2>3. Targeted Simulation (What-If Analysis)</h2>
             <p>
-                Instead of applying a general pricing adjustment, a <strong>targeted simulation</strong> was developed to isolate the effect of discount reductions on high-risk transactions. This approach isolates causality rather than relying on broad assumptions.
+                Rather than a blanket pricing adjustment, I built a <strong>targeted simulation</strong> to isolate the effect of discount reductions on high-risk transactions — a way to test causality instead of relying on broad assumptions.
             </p>
             <p>
-                The model selectively reduces discounts by 5% only for transactions above the identified threshold, allowing for controlled evaluation of pricing adjustments.
+                The model selectively reduces discounts by 5% only for transactions above the identified threshold, for a controlled read on how the adjustment actually performs.
             </p>
 
             <div class="insight-card">
@@ -261,14 +296,14 @@
 
             <h2>4. Interactive Dashboard</h2>
             <p>
-                The analysis was translated into an interactive Power BI dashboard that operationalizes the identified pricing threshold.
+                The analysis lives in an interactive Power BI dashboard built around this pricing threshold.
             </p>
             <p>
-                A discount reduction parameter allows users to dynamically simulate pricing strategies and observe their impact on profitability across product categories. The results highlight that Furniture and Office Supplies present the highest recovery potential.
+                A discount-reduction slider lets users simulate pricing strategies and see the impact on profitability by category. Furniture and Office Supplies show the most room to recover margin.
             </p>
 
             <div class="dashboard-container">
-                <img src="images/projects/super_dash.png" alt="Power BI Dashboard">
+                <img src="images/projects/super_dash.webp" alt="Power BI Dashboard">
             </div>
 
             <hr class="section-divider" />
@@ -286,7 +321,7 @@
 
             <div class="cta-container">
                 <h2>Deep Dive into the Analysis</h2>
-                <p style="color: #ccc; margin-bottom: 2rem;">Download the full Evidence-Driven Case Study to review the complete methodology, Python diagnostic logic, and strategic recommendations.</p>
+                <p style="color: #ccc; margin-bottom: 2rem;">Download the full case study for the complete methodology, the Python logic behind it, and my recommendations.</p>
                 <ul class="actions" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 1rem;">
                     <li>
                         <a href="assets/pdf/retail_profitability_case_study_luis_moto.pdf" target="_blank" class="button big button-cyan icon solid fa-download">
@@ -307,9 +342,9 @@
     <footer class="wrapper style1 align-center">
         <div class="inner">
             <ul class="icons">
-                <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://www.linkedin.com/in/luismoto" target="_blank" class="icon brands style2 fa-linkedin-in" aria-label="Luis Moto's LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/LuisMoto" target="_blank" class="icon brands style2 fa-github" aria-label="Luis Moto's GitHub profile"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:armandomoto25.m@gmail.com" class="icon style2 fa-envelope" aria-label="Email Luis Moto"><span class="label">Email</span></a></li>
             </ul>
             <p>&copy; Luis Moto 2026.</p>
         </div>

@@ -235,7 +235,7 @@
 						href = $a.attr('href');
 
 					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
+						if (!href.match(/\.(jpg|gif|png|webp|mp4)$/))
 							return;
 
 					// Prevent default.
@@ -253,7 +253,8 @@
 						$modalImg.attr('src', href);
 
 					// Set visible.
-						$modal.addClass('visible');
+						$modal.addClass('visible')
+							.attr('aria-hidden', 'false');
 
 					// Focus.
 						$modal.focus();
@@ -292,6 +293,7 @@
 
 							$modal
 								.removeClass('visible')
+								.attr('aria-hidden', 'true')
 
 							setTimeout(function() {
 
@@ -318,7 +320,7 @@
 							$modal.trigger('click');
 
 				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
+				.prepend('<div class="modal" tabIndex="-1" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true"><div class="inner"><img src="" /></div></div>')
 					.find('img')
 						.on('load', function(event) {
 
