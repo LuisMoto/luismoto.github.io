@@ -1,0 +1,19 @@
+# Sistema / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+.vscode/
+.idea/
+
+# Google Drive (si en algún momento vuelve a sincronizarse por accidente)
+*.tmp.driveupload
+*.tmp.drivedownload
+*conflicted copy*
+*.gdoc
+*.gsheet
+*.gslides
+
+# Node / build (por si en el futuro usas Sass compilado con npm)
+node_modules/
